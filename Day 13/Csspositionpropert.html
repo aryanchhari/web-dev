@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .box{
+            width: 200px;
+            height: 200px;
+            border: 2px solid red;
+            margin: 10px; 
+            background-color: aqua;
+            display: inline-block;
+        }
+        .static{
+            position: static;
+        }
+
+        .relative{
+            position: relative;
+            top: 20px;
+            left: 20px;
+        }
+        .absolute{
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box static">one</div>
+    <div class="box relative">two</div>
+    <div class="box absolute">Three</div>
+</body>
+</html>

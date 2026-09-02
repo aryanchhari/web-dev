@@ -1,0 +1,27 @@
+Block code - Are those elemnts which will take the entire left to right of the screen no matter the content size.
+
+<hr>
+<h1> to <h6>
+<pre>
+<p>
+<div>
+
+
+
+
+Inline code - These elemnts only take the necessary space on the screen which is requierd by the content.
+
+<a>
+<img>
+<b>
+<i>
+<u>
+<br>
+<em>
+<i>
+<strong>
+<small>
+<sub>
+<sup>
+<big>
+<span>
