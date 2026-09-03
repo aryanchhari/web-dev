@@ -1,0 +1,37 @@
+
+
+*{   <!-- This is a universal selector also this is used so that the black bar on the top starts from the entire top-->
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    height: 90px;
+    padding: 0px 30px 0px 30px;
+
+}
+
+h1{
+    color: white;
+}
+
+nav a{
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+nav{
+    display: flex;
+    gap: 30px;
+    text-decoration: none;
+
+}
+
+a:hover{
+    color: red;
+}
