@@ -1,8 +1,6 @@
 
-body{
-    background-image: url('Images/simplebanner.jpg');
-    background-size: cover;
-}
+
+
 *{   
     margin: 0;
     padding: 0;
@@ -26,9 +24,6 @@ header{
 
 }
 
-h1{
-    color: white;
-}
 
 nav a{
     color: white;
@@ -45,4 +40,30 @@ nav{
 
 a:hover{
     color: red;
+}
+
+.hero{
+    height: 100vh;
+    background:url(Images/simplebanner.jpg) no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.hero button{
+    padding: 15px 20px;
+    font-size: 15px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+.hero button:hover{
+    background-color: black;
+    color: red;
+    transition: 0.5s;
 }
