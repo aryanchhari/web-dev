@@ -67,3 +67,60 @@ a:hover{
     color: red;
     transition: 0.5s;
 }
+
+.video-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    gap: 20px;
+}
+
+.video-box{
+    flex: 1;
+}
+
+.video-text{
+    flex: 1;
+    padding: 20px;
+}
+
+.video-box video{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.video-text h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.video-text p{
+    font-size: 18px;
+    color: #555;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.about-section{
+    margin: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 25px;
+}
+
+.about-section H1{
+    color: red;
+    margin-bottom: 10px;
+    font-size: 30px;
+
+}
+
+.about-section p{
+    font-size: 18px;
+    color: #555;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.6;
+}
+
