@@ -1,11 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Media Query Practice</title>
+
+  <style>
+   
+    *{
+      margin: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    p {
+      background-color: lightgray;
+      color: black;
+      padding: 15px;
+      font-size: 18px;
+    }
+
+    img {
+      width: 300px;
+      max-width: 100%; 
+      height: auto;
+      border: 4px solid black;
+      box-sizing: border-box;
+    }
+
+
+    @media (max-width: 800px) {
+      p {
+        background-color: yellow;
+        color: blue;
+      }
+
+      img {
+        width: 200px;
+        border-color: blue;
+      }
+    }
+
+
+    @media (max-width: 500px) {
+      p {
+        background-color: lightpink;
+        color: darkred;
+        font-size: 16px;
+      }
+
+      img {
+        width: 120px;
+        border-color: darkred;
+      }
+    }
+
+
+    @media (min-width: 1000px) {
+      p {
+        background-color: lightgreen;
+        color: darkgreen;
+        padding: 25px;
+      }
+
+      img {
+        width: 400px;
+        border-color: green;
+      }
+    }
+  </style>
 </head>
 <body>
-    
+  <p>This is the first paragraph. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis debitis nobis id officia, quia voluptatum a sint molestiae similique quibusdam!</p>
+  <p>This is the second paragraph. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, quasi?</p>
+  <p>This is the third paragraph. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam, neque!</p>
+
+
+  <img src="https://tb-static.uber.com/prod/image-proc/processed_images/4656e6dbc36d6cde9d769433be6189f4/16bb0a3ab8ea98cfe8906135767f7bf4.jpeg" alt="A table with pizza and pasta">
+  <img src="https://tb-static.uber.com/prod/image-proc/processed_images/50e4eae3037a0d28885f3293f903b5c7/fb86662148be855d931b37d6c1e5fcbe.jpeg" alt="Pizza slices and vegetables on a table">
 </body>
 </html>
