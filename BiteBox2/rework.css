@@ -117,7 +117,7 @@ a:hover {
   line-height: 1.6;
 }
 
-.Backcolor  {
+.Backcolor {
   background-color: black;
   display: flex;
   justify-content: space-between;
@@ -159,10 +159,10 @@ a:hover {
   font-size: 30px;
 }
 
-h6{
-    padding-bottom: 40px;
-    padding-top: 10px;
-    background-color: black;
-    color: white;
-    text-align: center;
+h6 {
+  padding-bottom: 40px;
+  padding-top: 10px;
+  background-color: black;
+  color: white;
+  text-align: center;
 }
