@@ -167,3 +167,47 @@ h6 {
   color: white;
   text-align: center;
 }
+
+.category-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  overflow: auto;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ccc;
+}
+
+.icon-box {
+   cursor: pointer;
+   text-align: center;
+}
+
+.icon-box img {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.icon-box p {
+  margin-top: 5px;
+  font-size: 16px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.icon-box:hover p {
+  color: red;
+  transition: 0.3s;
+}
+
+.icon-box:hover img {
+  margin-top: 8px;
+}
