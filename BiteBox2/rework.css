@@ -153,6 +153,7 @@ a:hover {
   display: flex;
   gap: 20px;
   margin-top: 15px;
+  color: white;
 }
 
 .social-links a {
