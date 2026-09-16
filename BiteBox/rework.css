@@ -305,7 +305,7 @@ h6 {
 
 .Deals{
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(3,1fr);
   margin: 20px;
   padding: 15px;
   border: #333;
@@ -415,3 +415,38 @@ h6 {
   padding-left: 20px;
 }
 
+.scp2-1{
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 2px grey;
+  margin: 10px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-top: 2px solid red;
+}
+
+.scp2-2{
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 2px grey;
+  margin: 10px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-top: 2px solid yellow;
+}
+
+.scp2-3{
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 2px grey;
+  margin: 10px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-top: 2px solid green;
+}
