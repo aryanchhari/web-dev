@@ -389,6 +389,7 @@ h6 {
   padding-bottom: 20px;
   padding-right: 20px;
   padding-left: 20px;
+    background: linear-gradient(to right, #ffc371, #ff5f6d);
 }
 
 .scp1 H5{
@@ -425,6 +426,7 @@ h6 {
   padding-right: 20px;
   padding-left: 20px;
   border-top: 2px solid red;
+    background: linear-gradient(to right, #ffc371, #ff5f6d);
 }
 
 .scp2-2{
@@ -437,6 +439,7 @@ h6 {
   padding-right: 20px;
   padding-left: 20px;
   border-top: 2px solid yellow;
+    background: linear-gradient(to right, #ffc371, #ff5f6d);
 }
 
 .scp2-3{
@@ -449,4 +452,52 @@ h6 {
   padding-right: 20px;
   padding-left: 20px;
   border-top: 2px solid green;
+    background: linear-gradient(to right, #ffc371, #ff5f6d);
 }
+
+
+.scp2-1 h4{
+  display: inline;
+ text-align: center;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 2px grey;
+  margin: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-top: 2px solid red;
+  color: white;
+  background-color: black;
+}
+
+.scp2-2 h4{
+    display: inline;
+ text-align: center;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 2px grey;
+  margin: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-top: 2px solid yellow;
+  color: white;
+  background-color: black;
+}
+
+.scp2-3 h4{
+    display: inline;
+ text-align: center;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 2px grey;
+  margin: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-top: 2px solid green;
+  color: white;
+  background-color: black;
+}
+
