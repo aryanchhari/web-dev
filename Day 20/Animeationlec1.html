@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .animation{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 200px;
+
+            animation-name: movebox;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-delay: 2s;
+            animation-direction: alternate;
+        }
+
+        @keyframes movebox{
+            from {
+                transform: translateX(0);
+            }
+
+            to{
+                transform: translateX(500px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <Div class="animation"></Div>
+</body>
+</html>

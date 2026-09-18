@@ -501,3 +501,95 @@ h6 {
   background-color: black;
 }
 
+.grad{
+  background: linear-gradient(black grey);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.authbox{
+  background-color: whitesmoke;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  border-radius: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  
+
+}
+
+.authbox input{
+  border: 1px solid black;
+  border-radius: 3px;
+  display: block;
+  margin: 25px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  outline: none;
+  
+}
+
+.authbox input:focus{
+  border-color: red;
+}
+
+.authbox button{
+  border-radius: 3px;
+  background-color: red;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border: none;
+  width: 230px;
+  margin-bottom: 30px;
+}
+
+.SUN a{
+  color: red;
+  text-decoration: none;
+  padding-bottom: 20px;
+}
+
+input::placeholder{
+  font-size: medium;
+}
+
+
+input[type="text"] {
+    width: 200px;   
+    height: 20px;    
+    padding: 10px;   
+    font-size: 16px; 
+}
+
+input[type="email"] {
+    width: 200px;   
+    height: 20px;    
+    padding: 10px;   
+    font-size: 16px; 
+}
+
+input[type="password"] {
+    width: 200px;   
+    height: 20px;    
+    padding: 10px;   
+    font-size: 16px; 
+} 
+
+.authbox i {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%); 
+  cursor: pointer;
+  color: #666;
+}
+

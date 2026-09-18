@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .animation{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 30px;
+            align-items: center;
+            justify-content: center;
+
+        animation: movebox 2s infinite alternate
+        }
+
+        @keyframes movebox{
+            0%{
+                transform: translateY(0);
+                background-color: black;
+                border-color: blue;
+                border: 3px solid blue;
+
+            }
+
+
+            30%{
+                background-color: yellow;
+                border-color: pink;
+                border: 3px solid pink;
+
+            }
+
+            50%{
+                transform: translateY(600px);
+                border-color: green;
+                border: 3px solid grey;
+                background-color: cadetblue;
+            }
+
+            100%{
+                 transform: translateY(0);
+                background-color: black;
+                border-color: blue;
+                border: 3px solid blue;
+
+            }
+
+
+        }
+    </style>
+</head>
+<body>
+    <Div class="animation"></Div>
+</body>
+</html>
