@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+     
+        .animation1{
+        
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            margin: 30px;
+            align-items: center;
+            justify-content: center;
+            position:relative;
+            z-index: 4;
+            top: 40px;
+
+
+        animation: movebox 2s infinite;
+        animation-timing-function: ease
+        
+        }
+
+         .animation2{
+        
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 30px;
+            align-items: center;
+            justify-content: center;
+            z-index: 3;
+            position: relative;
+            bottom: 60px;
+
+        animation: movebox 2s infinite;
+        animation-timing-function: ease-in;
+        
+         }
+
+         .animation3{
+        
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin: 30px;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+            bottom: 140px;
+
+        animation: movebox 2s infinite;
+        animation-timing-function: ease-in-out;
+         
+        
+        }
+         .animation{
+        
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            margin: 30px;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            top: 100px;
+            
+            z-index: 1 ;
+
+        animation: movebox 2s infinite;
+        animation-timing-function: ease-out;
+         }
+
+        @keyframes movebox{
+            0%{
+                transform: translateY(0) translateX(0);
+                
+                border-color: blue;
+                border: 3px solid blue;
+
+            }
+
+
+            25%{
+                transform: translateX(300px) translateY(0);
+                background-color: yellow;
+                border-color: pink;
+                border: 3px solid pink;
+
+            }
+
+            50%{
+            
+                transform:  translateX(300px);
+                border-color: green;
+                border: 3px solid grey;
+                background-color: cadetblue;
+            }
+
+            75%{
+                transform: translateX(0) ;
+            }
+
+            100%{
+                transform: translateX(0) translateY(0);
+             
+                background-color: black;
+                border-color: blue;
+                border: 3px solid blue;
+
+            }
+
+            
+
+
+
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="Corp">
+    <Div class="animation"></Div>
+    <Div class="animation1"></Div>
+    <Div class="animation2"></Div>
+    <Div class="animation3"></Div>
+    </div>
+</body>
+</html>
