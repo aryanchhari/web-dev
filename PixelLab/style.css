@@ -1,0 +1,294 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+a{
+    color: lightgray;
+    text-decoration: none;
+}
+
+a:hover{
+    color: greenyellow;
+}
+
+p{
+    color: silver;
+}
+
+h1, h2, h3, p{
+    margin-top: 0;
+}
+
+.header{
+    width: 92%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid dimgray;
+}
+
+.logo{
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+}
+
+.logo span, .footer span{
+    color: greenyellow;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    font-size: 14px;
+}
+
+.active{
+    color: greenyellow;
+    border-bottom: 2px solid greenyellow;
+    padding: 10px 0;
+}
+
+.panellink{
+    background-color: greenyellow;
+    color: black;
+    padding: 10px 16px;
+    border-radius: 5px;
+}
+
+.panellink:hover{
+    background-color: white;
+    color: black;
+}
+
+.main{
+    width: 92%;
+    max-width: 1400px;
+    margin: 35px auto 50px;
+}
+
+.heading{
+    margin-bottom: 30px;
+}
+
+.smalltext{
+    color: greenyellow;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+h1{
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+h1 span{
+    color: silver;
+}
+
+h2{
+    font-size: 22px;
+}
+
+.comparison{
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.left{
+    width: 250px;
+    flex-shrink: 0;
+    border: 1px solid dimgray;
+    border-radius: 8px;
+    padding: 22px;
+}
+
+.left h2{
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.left p{
+    margin-bottom: 10px;
+}
+
+.panelname, .pattern{
+    border: 1px solid dimgray;
+    border-radius: 4px;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+}
+
+.pattern{
+    border-color: greenyellow;
+    color: greenyellow;
+}
+
+.conditions{
+    border-top: 1px solid dimgray;
+    padding-top: 20px;
+    margin-top: 24px;
+    font-size: 14px;
+}
+
+.later{
+    border-top: 1px solid dimgray;
+    padding-top: 18px;
+    margin-top: 22px;
+    font-size: 14px;
+}
+
+.right{
+    flex: 1;
+    min-width: 0;
+}
+
+.comparetop, .displaytop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comparetop p{
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.screens{
+    display: flex;
+    gap: 18px;
+}
+
+.display{
+    flex: 1;
+    min-width: 0;
+    border: 1px solid dimgray;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.displaytop{
+    margin-bottom: 16px;
+}
+
+.displaytop h2{
+    margin-bottom: 0;
+}
+
+.displaytop span{
+    color: silver;
+    font-size: 12px;
+}
+
+.screen{
+    height: 270px;
+    padding: 34px 18px 20px;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+.ips{
+    background-color: dimgray;
+}
+
+.oled{
+    background-color: black;
+}
+
+.colors{
+    height: 150px;
+    background: linear-gradient(to right, hotpink, mediumpurple, cornflowerblue, aquamarine, khaki);
+}
+
+.blacktest{
+    margin-top: 35px;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.display p{
+    margin: 14px 0 0;
+    font-size: 14px;
+}
+
+.note{
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+.infobox{
+    border: 1px solid dimgray;
+    border-radius: 6px;
+    padding: 18px;
+}
+
+.infobox h3{
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.infobox p{
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.details{
+    margin-top: 40px;
+    border-top: 1px solid dimgray;
+    padding-top: 28px;
+}
+
+.details h2{
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 22px;
+    font-size: 15px;
+}
+
+th, td{
+    border: 1px solid dimgray;
+    padding: 16px 20px;
+    text-align: left;
+}
+
+th{
+    color: greenyellow;
+}
+
+td{
+    color: lightgray;
+}
+
+.footer{
+    width: 92%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 20px 0;
+    border-top: 1px solid dimgray;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.footer p{
+    margin: 0;
+}
