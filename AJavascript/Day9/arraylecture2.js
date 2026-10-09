@@ -1,11 +1,11 @@
 let name = ["Aryan", "Shub" ,"Anitamax","urmmm", "yoyoyo" ,"aino","raiden"]
-// for (let a = 0; a<2; a++){
-//     console.log(name[a]);
-// }
+for (let a = 0; a<2; a++){
+    console.log(name[a]);
+}
 
-// for (let a = 1; a<4; a++){
-//     console.log(name[a]);
-// }
+for (let a = 1; a<4; a++){
+    console.log(name[a]);
+}
 
 for (let a = 6; a>=0; a--){
     console.log(name[a]);
