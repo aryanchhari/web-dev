@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="AAA">hellow</p>
+    <p class="AAA">heolll</p>
+    <p class="AAA">siiiii</p>
+    <button onmouseover="A()" onmouseleave="B()">Submit</button>
+
+    <script>
+        function A(){
+            let AA = document.querySelectorAll(".AAA")
+            AA[0].style.color="red";
+            AA[1].style.color="blue";
+            AA[2].style.color="green";
+        }
+
+         function B(){
+            let AA = document.querySelectorAll(".AAA")
+            AA[0].style.color="black";
+            AA[1].style.color="black";
+            AA[2].style.color="black";
+        }
+
+
+    </script>
+</body>
+</html>
