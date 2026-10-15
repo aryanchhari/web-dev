@@ -1,0 +1,7 @@
+.d-block w-100{
+  width: 100%;                  /* Fills the horizontal space */
+  aspect-ratio: 16 / 9;         /* Enforces your desired banner ratio (e.g., 21:9) */
+  object-fit: cover;            /* Cuts off the excess without distorting the image */
+  object-position: center;      /* Focuses the crop on the center of the image */
+}
+
