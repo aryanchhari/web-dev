@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#081511">
+  <meta name="description" content="Explore the extraordinary. An independent Aston Martin design concept featuring the DB12, Vantage, and Vanquish.">
+  <title>Aston Martin — Beauty. Unleashed.</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/manrope-500.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/hero.jpg" as="image">
+  <!-- Bootstrap provides the grid, navbar, buttons, accordion, and modal. -->
+  <link rel="stylesheet" href="assets/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="assets/bootstrap.bundle.min.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Responsive Bootstrap navigation -->
+  <header class="site-header" id="top">
+    <nav class="navbar navbar-expand-lg navbar-dark py-0" aria-label="Main navigation">
+      <div class="container-fluid page-container px-0">
+        <a class="navbar-brand m-0" href="#top" aria-label="Aston Martin home">
+          <img class="brand-logo" src="assets/aston-martin.svg" alt="Aston Martin" width="166" height="39">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav mx-lg-auto gap-lg-4">
+            <li class="nav-item"><a class="nav-link" href="#collection">Our models</a></li>
+            <li class="nav-item"><a class="nav-link" href="#craft">The craft</a></li>
+            <li class="nav-item"><a class="nav-link" href="#experience">The experience</a></li>
+          </ul>
+          <a class="btn btn-outline-light nav-cta" href="https://www.astonmartin.com/en/dealers" target="_blank" rel="noopener noreferrer">Find a dealer <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Full-height photographic hero -->
+    <section class="hero" aria-labelledby="heroTitle">
+      <img class="hero-image" src="assets/hero.jpg" alt="An emerald green Aston Martin DB12 driving along a winding mountain road" width="1920" height="1438" fetchpriority="high">
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="page-container hero-content">
+        <p class="eyebrow hero-eyebrow"><span class="accent-line" aria-hidden="true"></span> Aston Martin DB12</p>
+        <h1 id="heroTitle">BEAUTY.<br><span>UNLEASHED.</span></h1>
+        <p class="hero-description">For the love of the drive.<br>For the feeling of nothing else.</p>
+        <div class="d-flex flex-wrap gap-3 hero-actions">
+          <button class="btn btn-lime" type="button" data-bs-toggle="modal" data-bs-target="#modelModal" data-model="db12">Discover DB12 <span aria-hidden="true">↗</span></button>
+          <a class="btn btn-quiet" href="#collection">Explore the collection <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-caption"><span class="status-dot" aria-hidden="true"></span> The road is calling.</div>
+      </div>
+
+      <div class="hero-footer">
+        <div class="page-container d-flex align-items-end justify-content-between gap-4">
+          <div class="d-flex hero-stats" aria-label="DB12 performance specifications">
+            <div class="hero-stat"><div>680 <span>PS</span></div><p>Maximum power</p></div>
+            <div class="hero-stat"><div>3.6 <span>S</span></div><p>0–100 km/h</p></div>
+            <div class="hero-stat"><div>325 <span>KM/H</span></div><p>Top speed</p></div>
+          </div>
+          <a class="scroll-link" href="#collection" aria-label="Scroll to the collection"><span>Keep exploring</span><span class="circle-arrow" aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <span class="hero-side-label" aria-hidden="true">The super tourer / 01</span>
+    </section>
+
+    <!-- Bootstrap's responsive grid keeps the model cards aligned. -->
+    <section class="collection section-space" id="collection" aria-labelledby="collectionTitle">
+      <div class="page-container">
+        <div class="row align-items-end g-4 section-heading reveal">
+          <div class="col-lg-8">
+            <p class="eyebrow section-label"><span>01</span> / The collection</p>
+            <h2 id="collectionTitle">Different souls.<br>The same obsession.</h2>
+          </div>
+          <div class="col-lg-4 section-intro">
+            <p>A grand escape. A sharper thrill.<br>A world of possibilities.</p>
+            <a class="text-link" href="https://www.astonmartin.com/en/models" target="_blank" rel="noopener noreferrer">View all models <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-4 reveal">
+            <article class="card model-card h-100 border-0 rounded-0">
+              <button class="model-image-button" type="button" data-bs-toggle="modal" data-bs-target="#modelModal" data-model="db12" aria-label="Discover the Aston Martin DB12">
+                <span class="model-index">01 / Grand touring</span>
+                <img src="assets/db12.png" alt="Green Aston Martin DB12, side profile" width="1169" height="480" loading="lazy">
+                <span class="image-hint">Take a closer look <span aria-hidden="true">↗</span></span>
+              </button>
+              <div class="card-body px-0 pb-0">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                  <h3 class="card-title mb-0">DB12</h3>
+                  <button class="model-arrow" type="button" data-bs-toggle="modal" data-bs-target="#modelModal" data-model="db12" aria-label="View DB12 specifications">↗</button>
+                </div>
+                <p class="model-description">Every journey, an occasion.</p>
+                <div class="model-meta"><span>4.0L Twin-Turbo V8</span><span>680 PS</span></div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-4 reveal">
+            <article class="card model-card h-100 border-0 rounded-0">
+              <button class="model-image-button" type="button" data-bs-toggle="modal" data-bs-target="#modelModal" data-model="vantage" aria-label="Discover the Aston Martin Vantage">
+                <span class="model-index">02 / Pure performance</span>
+                <img src="assets/vantage.png" alt="Teal Aston Martin Vantage, side profile" width="1169" height="480" loading="lazy">
+                <span class="image-hint">Take a closer look <span aria-hidden="true">↗</span></span>
+              </button>
+              <div class="card-body px-0 pb-0">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                  <h3 class="card-title mb-0">Vantage</h3>
+                  <button class="model-arrow" type="button" data-bs-toggle="modal" data-bs-target="#modelModal" data-model="vantage" aria-label="View Vantage specifications">↗</button>
+                </div>
+                <p class="model-description">For those who feel every corner.</p>
+                <div class="model-meta"><span>4.0L Twin-Turbo V8</span><span>665 PS</span></div>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-4 reveal">
+            <article class="card model-card h-100 border-0 rounded-0">
+              <button class="model-image-button" type="button" data-bs-toggle="modal" data-bs-target="#modelModal" data-model="vanquish" aria-label="Discover the Aston Martin Vanquish">
+                <span class="model-index">03 / V12 expression</span>
+                <img src="assets/vanquish.jpg" alt="Red Aston Martin Vanquish, side profile" width="1169" height="480" loading="lazy">
+                <span class="image-hint">Take a closer look <span aria-hidden="true">↗</span></span>
+              </button>
+              <div class="card-body px-0 pb-0">
+                <div class="d-flex align-items-center justify-content-between mb-2">
+                  <h3 class="card-title mb-0">Vanquish</h3>
+                  <button class="model-arrow" type="button" data-bs-toggle="modal" data-bs-target="#modelModal" data-model="vanquish" aria-label="View Vanquish specifications">↗</button>
+                </div>
+                <p class="model-description">A presence without equal.</p>
+                <div class="model-meta"><span>5.2L Twin-Turbo V12</span><span>835 PS</span></div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <p class="collection-footnote">Three expressions. One unmistakable feeling.</p>
+      </div>
+    </section>
+
+    <!-- A Bootstrap accordion lets visitors explore the details. -->
+    <section class="craft section-space" id="craft" aria-labelledby="craftTitle">
+      <div class="page-container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-5 craft-copy reveal">
+            <p class="eyebrow section-label"><span>02</span> / The art of Aston Martin</p>
+            <h2 id="craftTitle">A feeling.<br><span class="muted-heading">Engineered.</span></h2>
+            <p class="craft-intro">The curve of a silhouette. The touch of leather. The anticipation before the engine comes alive. Extraordinary lives in the details.</p>
+            <div class="accordion accordion-flush" id="craftAccordion">
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#craftOne" aria-expanded="true" aria-controls="craftOne"><span class="detail-number">01</span> A world around you</button></h3>
+                <div id="craftOne" class="accordion-collapse collapse show" data-bs-parent="#craftAccordion"><div class="accordion-body">Rich materials, tactile controls, and a cockpit shaped around the driver. In DB12, luxury is something you feel.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#craftTwo" aria-expanded="false" aria-controls="craftTwo"><span class="detail-number">02</span> Power with character</button></h3>
+                <div id="craftTwo" class="accordion-collapse collapse" data-bs-parent="#craftAccordion"><div class="accordion-body">DB12 pairs a 4.0-litre twin-turbo V8 with an eight-speed automatic transmission. From a quiet escape to an open stretch of road, every drive has its own rhythm.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#craftThree" aria-expanded="false" aria-controls="craftThree"><span class="detail-number">03</span> Unmistakably yours</button></h3>
+                <div id="craftThree" class="accordion-collapse collapse" data-bs-parent="#craftAccordion"><div class="accordion-body">Explore colours, materials, and finishing touches in the official Aston Martin configurator. A personal expression, down to the last detail.</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7 reveal">
+            <figure class="craft-image mb-0">
+              <img src="assets/interior.jpg" alt="The DB12's leather-trimmed cockpit and centre console, overlooking a lake and mountains" width="1920" height="1080" loading="lazy">
+              <figcaption><span>A closer connection.</span><span>DB12 / The interior</span></figcaption>
+              <span class="image-corner" aria-hidden="true">+</span>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience" id="experience" aria-labelledby="experienceTitle">
+      <img src="assets/driving.jpg" class="experience-image" alt="Emerald green DB12 approaching a bend on a coastal road" width="1920" height="1080" loading="lazy">
+      <div class="experience-shade" aria-hidden="true"></div>
+      <div class="page-container position-relative">
+        <div class="row">
+          <div class="col-md-6 offset-md-6 col-lg-5 offset-lg-7 experience-copy reveal">
+            <p class="eyebrow"><span class="accent-line" aria-hidden="true"></span> Your next chapter</p>
+            <h2 id="experienceTitle">Some things<br>must be felt.</h2>
+            <p>Choose the car. Find your colour.<br>Make every mile your own.</p>
+            <a class="btn btn-lime" href="https://configurator.astonmartin.com/" target="_blank" rel="noopener noreferrer">Create your Aston <span aria-hidden="true">↗</span></a>
+            <span class="external-note">Explore the official configurator</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-container">
+      <div class="footer-top d-flex flex-wrap align-items-center justify-content-between gap-4">
+        <p class="mb-0">The pursuit of extraordinary.</p>
+        <div class="d-flex flex-wrap gap-4 footer-links">
+          <a href="#collection">Our models</a>
+          <a href="#craft">The craft</a>
+          <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+        </div>
+      </div>
+      <div class="footer-wordmark" aria-hidden="true">ASTON MARTIN</div>
+      <div class="footer-bottom d-flex flex-wrap align-items-center justify-content-between gap-3">
+        <p class="mb-0">Independent design concept. Not affiliated with Aston Martin.</p>
+        <a href="https://www.astonmartin.com/en" target="_blank" rel="noopener noreferrer">Photography &amp; specifications: Aston Martin <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Reusable Bootstrap modal populated by a small amount of JavaScript. -->
+  <div class="modal fade" id="modelModal" tabindex="-1" aria-labelledby="modalModelTitle" aria-hidden="true" data-bs-theme="dark">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content rounded-0">
+        <div class="modal-header border-0 pb-0">
+          <p class="eyebrow mb-0">A closer look</p>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close model details"></button>
+        </div>
+        <div class="modal-body">
+          <img id="modalModelImage" class="modal-model-image" src="assets/db12.png" alt="Aston Martin DB12" width="1169" height="480">
+          <p id="modalModelCategory" class="eyebrow text-lime mt-4">The super tourer</p>
+          <h2 class="modal-title" id="modalModelTitle">DB12</h2>
+          <p id="modalModelDescription" class="modal-description">Grand touring, with an extraordinary sense of occasion.</p>
+          <div class="row g-3 modal-stats">
+            <div class="col-4"><strong id="modalPower">680</strong><span>Power / PS</span></div>
+            <div class="col-4"><strong id="modalAcceleration">3.6</strong><span>0–100 km/h / s</span></div>
+            <div class="col-4"><strong id="modalSpeed">325</strong><span>Top speed / km/h</span></div>
+          </div>
+          <a id="modalOfficialLink" class="btn btn-lime w-100 mt-4" href="https://www.astonmartin.com/en/models/db12" target="_blank" rel="noopener noreferrer">Explore on Aston Martin <span aria-hidden="true">↗</span></a>
+          <p class="modal-note mb-0 mt-3">Specifications shown for the featured coupé. Official model details open in a new tab.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
