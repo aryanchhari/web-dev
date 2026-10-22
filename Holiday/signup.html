@@ -3,56 +3,135 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <style>
-      *{
-        box-sizing: border-box;
-
-      }
-      html,body{
-        overflow-x: hidden;
-      }
-
-    
-
-    </style>
+    <title>Holiday | Create Account</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    >
   </head>
-  <body>
-    <div class="container-fluid px-0">
-      <div class="col-12">
+  <body id="top" class="d-flex flex-column min-vh-100 bg-body-tertiary">
+    <nav class="navbar navbar-expand bg-dark shadow-sm py-3" data-bs-theme="dark">
+      <div class="container flex-column flex-lg-row gap-3">
+        <a class="navbar-brand fw-bold fs-3" href="index.html">
+          Holiday<span class="text-warning">.</span>
+        </a>
+        <ul class="navbar-nav flex-row flex-wrap justify-content-center gap-3 ms-lg-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="destination.html">Destinations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="destination.html#packages">Packages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="booking.html">Booking</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <a class="btn btn-warning fw-semibold ms-lg-4 px-4 rounded-pill" href="signup.html" aria-current="page">
+          Sign up
+        </a>
+      </div>
+    </nav>
 
-    
-        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand fw-bold" href="#">Holiday</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-end ms-auto">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="destination.html">Destination</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Packages</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Booking</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
-        </li>
-      </ul> 
-      <button type="button" class="btn btn-warning">Login</button>
-    </div>
-  </div>
-</nav>
-</div>
-    </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <main class="flex-grow-1 py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-6">
+            <div class="card border-0 rounded-4 shadow-sm">
+              <div class="card-body p-4 p-md-5">
+                <div class="text-center mb-4">
+                  <p class="small fw-bold text-uppercase text-warning-emphasis mb-2">Join Holiday</p>
+                  <h1 class="h2 fw-bold mb-2">Create your account</h1>
+                  <p class="text-body-secondary mb-0">A new adventure starts here.</p>
+                </div>
+
+                <!-- Connect this POST form to an account service when the backend is ready. -->
+                <form id="signupForm" action="#" method="post">
+                  <div class="mb-3">
+                    <label for="fullName" class="form-label">Full name</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="fullName"
+                      name="fullName"
+                      placeholder="Your full name"
+                      autocomplete="name"
+                      pattern=".*\S.*"
+                      maxlength="100"
+                      required
+                    >
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input
+                      class="form-control"
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="name@example.com"
+                      autocomplete="email"
+                      required
+                    >
+                  </div>
+                  <div class="mb-4">
+                    <label for="password" class="form-label">Password</label>
+                    <input
+                      class="form-control"
+                      type="password"
+                      id="password"
+                      name="password"
+                      placeholder="Create a password"
+                      autocomplete="new-password"
+                      minlength="8"
+                      maxlength="128"
+                      aria-describedby="passwordHelp"
+                      required
+                    >
+                    <div class="form-text" id="passwordHelp">Use at least 8 characters.</div>
+                  </div>
+                  <p class="small text-body-secondary mb-3">
+                    Practice form: account creation is not connected yet.
+                  </p>
+                  <button class="btn btn-warning rounded-pill fw-semibold w-100 py-2" type="submit">
+                    Create account
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-white border-top py-4">
+      <div class="container">
+        <div
+          class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3"
+        >
+          <a class="fs-4 fw-bold text-dark text-decoration-none" href="index.html">
+            Holiday<span class="text-warning-emphasis">.</span>
+          </a>
+          <nav class="nav justify-content-center" aria-label="Footer navigation">
+            <a class="nav-link px-2 link-secondary" href="destination.html">Destinations</a>
+            <a class="nav-link px-2 link-secondary" href="destination.html#packages">Packages</a>
+            <a class="nav-link px-2 link-secondary" href="index.html">Home</a>
+            <a class="nav-link px-2 link-secondary" href="index.html#why-holiday">About</a>
+            <a class="nav-link px-2 link-secondary" href="#top">
+              Back to top <span aria-hidden="true">&uarr;</span>
+            </a>
+          </nav>
+        </div>
+        <p class="small text-body-secondary text-center text-md-start border-top pt-3 mt-3 mb-0">
+          &copy; 2026 Holiday. Designed by Aryan with Bootstrap.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
