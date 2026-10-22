@@ -1,280 +1,172 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Find your next getaway with Holiday. Explore Tokyo, Paris and Agra, browse travel packages, and plan a trip your way."
-    />
-    <title>Holiday | Your next great escape</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Holiday | Travel Website</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
-    />
+    >
     <style>
-      /* Bootstrap handles layout; these rules size the hero and offset anchor links. */
+      /* Bootstrap handles the layout. These rules size and align the carousel slides. */
       .hero-image {
-        height: clamp(34rem, 75vh, 43rem);
+        height: 640px;
       }
 
-      section[id] {
-        scroll-margin-top: 6rem;
+      .carousel-slides {
+        scroll-snap-type: x mandatory;
+      }
+
+      .carousel-panel {
+        scroll-snap-align: start;
       }
     </style>
   </head>
   <body id="top" class="bg-body-tertiary">
-    <a class="visually-hidden-focusable fixed-top bg-white p-3" href="#main-content">
-      Skip to content
-    </a>
-
-    <!-- The navbar collapses into a menu below Bootstrap's large breakpoint. -->
-    <nav
-      class="navbar navbar-expand-lg bg-dark sticky-top shadow-sm py-3"
-      data-bs-theme="dark"
-      aria-label="Main navigation"
-    >
-      <div class="container">
-        <a class="navbar-brand fw-bold fs-3" href="#top"
-          >Holiday<span class="text-warning">.</span></a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#mainNav"
-          aria-controls="mainNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="mainNav">
-          <ul class="navbar-nav ms-auto gap-lg-3 align-items-lg-center">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#top">Home</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#destinations">Destinations</a></li>
-            <li class="nav-item"><a class="nav-link" href="#packages">Packages</a></li>
-            <li class="nav-item">
-              <button
-                class="nav-link"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#bookingModal"
-              >
-                Booking
-              </button>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          </ul>
-          <a
-            class="btn btn-warning fw-semibold ms-lg-4 mt-3 mt-lg-0 px-4 rounded-pill"
-            href="signup.html"
-            >Sign up</a
-          >
-        </div>
+    <!-- The links stay visible on mobile, so the navbar needs no menu script. -->
+    <nav class="navbar navbar-expand bg-dark shadow-sm py-3" data-bs-theme="dark">
+      <div class="container flex-column flex-lg-row gap-3">
+        <a class="navbar-brand fw-bold fs-3" href="#top">
+          Holiday<span class="text-warning">.</span>
+        </a>
+        <ul class="navbar-nav flex-row flex-wrap justify-content-center gap-3 ms-lg-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#top">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="destination.html">Destinations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#packages">Packages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="booking.html">Booking</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <a class="btn btn-warning fw-semibold ms-lg-4 px-4 rounded-pill" href="signup.html">
+          Sign up
+        </a>
       </div>
     </nav>
 
-    <main id="main-content" tabindex="-1">
-      <!-- Use the existing local photos until the new image update is ready. -->
-      <div
-        id="holidayCarousel"
-        class="carousel slide"
-        data-bs-interval="false"
-        role="region"
-        aria-roledescription="carousel"
-        aria-label="Featured holiday destinations"
-      >
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#holidayCarousel"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Show Agra"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#holidayCarousel"
-            data-bs-slide-to="1"
-            aria-label="Show Paris"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#holidayCarousel"
-            data-bs-slide-to="2"
-            aria-label="Show Tokyo"
-          ></button>
-        </div>
-        <div class="carousel-inner">
-          <div
-            class="carousel-item active"
-            role="group"
-            aria-roledescription="slide"
-            aria-label="1 of 3: Agra"
-          >
+    <main>
+      <!-- Scroll sideways or use the arrows to change slides without JavaScript. -->
+      <div id="holidayCarousel" class="position-relative" aria-label="Featured destinations">
+        <div class="carousel-slides d-flex overflow-x-auto">
+          <div id="agraSlide" class="carousel-panel position-relative w-100 flex-shrink-0">
             <img
               src="imgs/777150-3840x2160-desktop-4k-the-taj-mahal-wallpaper-image.jpg"
               class="d-block w-100 object-fit-cover hero-image"
-              width="3840"
-              height="2160"
               alt="The Taj Mahal and its reflecting pool in Agra"
-              fetchpriority="high"
-            />
-            <div
-              class="position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-50"
-              aria-hidden="true"
-            ></div>
-            <div
-              class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center text-white"
             >
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-50"></div>
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center text-white">
               <div class="container pb-5">
                 <div class="row">
                   <div class="col-lg-8 col-xl-7">
-                    <p class="small fw-bold text-uppercase text-warning mb-3">
-                      Big memories. Beautiful places.
-                    </p>
+                    <p class="small fw-bold text-uppercase text-warning mb-3">Big memories. Beautiful places.</p>
                     <h1 class="display-3 fw-bold mb-4">
-                      Your next story<br />starts <span class="text-warning">here.</span>
+                      Your next story<br>starts <span class="text-warning">here.</span>
                     </h1>
                     <p class="fs-5 mb-4">
                       From a sunrise at the Taj Mahal to a city you've always dreamed of. Make a
                       little room for adventure.
                     </p>
-                    <a
-                      class="btn btn-warning btn-lg rounded-pill fw-semibold px-4"
-                      href="#destinations"
-                      >Find your escape <span aria-hidden="true">&rarr;</span></a
-                    >
-                    <p class="small mt-4 mb-0">
-                      Featured escape <span aria-hidden="true">&middot;</span> Agra, India
-                    </p>
+                    <a class="btn btn-warning btn-lg rounded-pill fw-semibold px-4" href="#packages">
+                      Find your escape <span aria-hidden="true">&rarr;</span>
+                    </a>
+                    <p class="small mt-4 mb-0">Featured escape &middot; Agra, India</p>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="position-absolute bottom-0 end-0 d-flex gap-2 me-3 me-lg-5 mb-4">
+              <a class="btn btn-outline-light rounded-circle p-2 d-flex" href="#tokyoSlide" aria-label="Previous destination">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              </a>
+              <a class="btn btn-outline-light rounded-circle p-2 d-flex" href="#parisSlide" aria-label="Next destination">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              </a>
+            </div>
           </div>
-          <div
-            class="carousel-item"
-            role="group"
-            aria-roledescription="slide"
-            aria-label="2 of 3: Paris"
-          >
+          <div id="parisSlide" class="carousel-panel position-relative w-100 flex-shrink-0">
             <img
               src="imgs/30528-3840x2160-desktop-4k-eiffel-tower-background-image.jpg"
               class="d-block w-100 object-fit-cover hero-image"
-              width="3840"
-              height="2160"
               alt="The Eiffel Tower rising above the Paris skyline"
-              loading="lazy"
-            />
-            <div
-              class="position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-50"
-              aria-hidden="true"
-            ></div>
-            <div
-              class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center text-white"
             >
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-50"></div>
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center text-white">
               <div class="container pb-5">
                 <div class="row">
                   <div class="col-lg-8 col-xl-7">
-                    <p class="small fw-bold text-uppercase text-warning mb-3">
-                      A city made for wandering
-                    </p>
+                    <p class="small fw-bold text-uppercase text-warning mb-3">A city made for wandering</p>
                     <h2 class="display-3 fw-bold mb-4">
-                      A little Paris.<br />A lot to <span class="text-warning">love.</span>
+                      A little Paris.<br>A lot to <span class="text-warning">love.</span>
                     </h2>
                     <p class="fs-5 mb-4">
                       Riverside walks, neighbourhood caf&eacute;s, and that first glimpse of the
                       Eiffel Tower. Take the scenic route.
                     </p>
-                    <a class="btn btn-warning btn-lg rounded-pill fw-semibold px-4" href="#packages"
-                      >Explore packages <span aria-hidden="true">&rarr;</span></a
-                    >
-                    <p class="small mt-4 mb-0">
-                      Featured escape <span aria-hidden="true">&middot;</span> Paris, France
-                    </p>
+                    <a class="btn btn-warning btn-lg rounded-pill fw-semibold px-4" href="#packages">
+                      Explore packages <span aria-hidden="true">&rarr;</span>
+                    </a>
+                    <p class="small mt-4 mb-0">Featured escape &middot; Paris, France</p>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="position-absolute bottom-0 end-0 d-flex gap-2 me-3 me-lg-5 mb-4">
+              <a class="btn btn-outline-light rounded-circle p-2 d-flex" href="#agraSlide" aria-label="Previous destination">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              </a>
+              <a class="btn btn-outline-light rounded-circle p-2 d-flex" href="#tokyoSlide" aria-label="Next destination">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              </a>
+            </div>
           </div>
-          <div
-            class="carousel-item"
-            role="group"
-            aria-roledescription="slide"
-            aria-label="3 of 3: Tokyo"
-          >
+          <div id="tokyoSlide" class="carousel-panel position-relative w-100 flex-shrink-0">
             <img
               src="imgs/1390508-3840x2160-desktop-4k-japan-skyline-background-photo.jpg"
               class="d-block w-100 object-fit-cover hero-image"
-              width="3840"
-              height="2160"
               alt="Tokyo Tower illuminated among the city buildings"
-              loading="lazy"
-            />
-            <div
-              class="position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-50"
-              aria-hidden="true"
-            ></div>
-            <div
-              class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center text-white"
             >
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-50"></div>
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center text-white">
               <div class="container pb-5">
                 <div class="row">
                   <div class="col-lg-8 col-xl-7">
-                    <p class="small fw-bold text-uppercase text-warning mb-3">
-                      Find something unexpected
-                    </p>
+                    <p class="small fw-bold text-uppercase text-warning mb-3">Find something unexpected</p>
                     <h2 class="display-3 fw-bold mb-4">
-                      Bright lights.<br />Brand new <span class="text-warning">stories.</span>
+                      Bright lights.<br>Brand new <span class="text-warning">stories.</span>
                     </h2>
                     <p class="fs-5 mb-4">
                       Explore Tokyo's lively streets, quiet corners, and unforgettable skyline. Your
                       Japan chapter begins here.
                     </p>
-                    <button
-                      class="btn btn-warning btn-lg rounded-pill fw-semibold px-4"
-                      type="button"
-                      data-bs-toggle="modal"
-                      data-bs-target="#bookingModal"
-                      data-destination="Tokyo"
-                    >
-                      Plan a Tokyo trip <span aria-hidden="true">&rarr;</span>
-                    </button>
-                    <p class="small mt-4 mb-0">
-                      Featured escape <span aria-hidden="true">&middot;</span> Tokyo, Japan
-                    </p>
+                    <a class="btn btn-warning btn-lg rounded-pill fw-semibold px-4" href="#packages">
+                      Explore Tokyo packages <span aria-hidden="true">&rarr;</span>
+                    </a>
+                    <p class="small mt-4 mb-0">Featured escape &middot; Tokyo, Japan</p>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="position-absolute bottom-0 end-0 d-flex gap-2 me-3 me-lg-5 mb-4">
+              <a class="btn btn-outline-light rounded-circle p-2 d-flex" href="#parisSlide" aria-label="Previous destination">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              </a>
+              <a class="btn btn-outline-light rounded-circle p-2 d-flex" href="#agraSlide" aria-label="Next destination">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="position-absolute bottom-0 end-0 d-flex gap-2 me-3 me-lg-5 mb-4 z-2">
-          <button
-            class="btn btn-outline-light rounded-circle p-2 d-flex"
-            type="button"
-            data-bs-target="#holidayCarousel"
-            data-bs-slide="prev"
-            aria-label="Previous destination"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          </button>
-          <button
-            class="btn btn-outline-light rounded-circle p-2 d-flex"
-            type="button"
-            data-bs-target="#holidayCarousel"
-            data-bs-slide="next"
-            aria-label="Next destination"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          </button>
         </div>
       </div>
 
@@ -290,10 +182,12 @@
             <div class="col-md-4">
               <div class="d-flex gap-3">
                 <span
-                  class="badge rounded-circle bg-warning-subtle text-warning-emphasis align-self-start p-3 fs-6"
+                  class="badge rounded-circle bg-warning-subtle text-warning-emphasis
+                  align-self-start p-3 fs-6"
                   aria-hidden="true"
-                  >01</span
                 >
+                  01
+                </span>
                 <div>
                   <h3 class="h5 fw-bold">Easy planning</h3>
                   <p class="text-body-secondary mb-0">
@@ -305,10 +199,12 @@
             <div class="col-md-4">
               <div class="d-flex gap-3">
                 <span
-                  class="badge rounded-circle bg-warning-subtle text-warning-emphasis align-self-start p-3 fs-6"
+                  class="badge rounded-circle bg-warning-subtle text-warning-emphasis
+                  align-self-start p-3 fs-6"
                   aria-hidden="true"
-                  >02</span
                 >
+                  02
+                </span>
                 <div>
                   <h3 class="h5 fw-bold">Memorable places</h3>
                   <p class="text-body-secondary mb-0">
@@ -320,10 +216,12 @@
             <div class="col-md-4">
               <div class="d-flex gap-3">
                 <span
-                  class="badge rounded-circle bg-warning-subtle text-warning-emphasis align-self-start p-3 fs-6"
+                  class="badge rounded-circle bg-warning-subtle text-warning-emphasis
+                  align-self-start p-3 fs-6"
                   aria-hidden="true"
-                  >03</span
                 >
+                  03
+                </span>
                 <div>
                   <h3 class="h5 fw-bold">Your kind of holiday</h3>
                   <p class="text-body-secondary mb-0">
@@ -332,133 +230,6 @@
                   </p>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="destinations" class="py-5" aria-labelledby="destinationsHeading">
-        <div class="container py-lg-3">
-          <div
-            class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3 mb-4"
-          >
-            <div>
-              <p class="small fw-bold text-uppercase text-warning-emphasis mb-2">
-                Where will you go next?
-              </p>
-              <h2 id="destinationsHeading" class="fw-bold mb-2">Places worth the journey</h2>
-              <p class="text-body-secondary mb-0">
-                Three destinations. A world of ways to explore.
-              </p>
-            </div>
-            <a
-              class="btn btn-outline-dark rounded-pill px-4 align-self-start"
-              href="destination.html"
-              >Destination guide <span aria-hidden="true">&nearr;</span></a
-            >
-          </div>
-
-          <!-- Responsive columns and h-100 keep cards aligned without fixed widths. -->
-          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            <div class="col">
-              <article class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
-                <div class="ratio ratio-4x3">
-                  <img
-                    src="imgs/1390508-3840x2160-desktop-4k-japan-skyline-background-photo.jpg"
-                    class="object-fit-cover"
-                    width="3840"
-                    height="2160"
-                    alt="Tokyo Tower illuminated among the city buildings"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-                <div class="card-body p-4 d-flex flex-column">
-                  <p class="small text-body-secondary mb-2">
-                    JAPAN <span aria-hidden="true">&middot;</span> CITY ESCAPE
-                  </p>
-                  <h3 class="card-title h4 fw-bold">Tokyo</h3>
-                  <p class="card-text text-body-secondary">
-                    Neon streets, peaceful gardens, and a new discovery around every corner.
-                  </p>
-                  <button
-                    class="btn btn-outline-dark rounded-pill align-self-start mt-auto"
-                    type="button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#bookingModal"
-                    data-destination="Tokyo"
-                  >
-                    Explore Tokyo <span aria-hidden="true">&rarr;</span>
-                  </button>
-                </div>
-              </article>
-            </div>
-            <div class="col">
-              <article class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
-                <div class="ratio ratio-4x3">
-                  <img
-                    src="imgs/30528-3840x2160-desktop-4k-eiffel-tower-background-image.jpg"
-                    class="object-fit-cover"
-                    width="3840"
-                    height="2160"
-                    alt="The Eiffel Tower rising above the Paris skyline"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-                <div class="card-body p-4 d-flex flex-column">
-                  <p class="small text-body-secondary mb-2">
-                    FRANCE <span aria-hidden="true">&middot;</span> CULTURE &amp; CAF&Eacute;S
-                  </p>
-                  <h3 class="card-title h4 fw-bold">Paris</h3>
-                  <p class="card-text text-body-secondary">
-                    Riverside strolls, beautiful neighbourhoods, and a skyline you'll never forget.
-                  </p>
-                  <button
-                    class="btn btn-outline-dark rounded-pill align-self-start mt-auto"
-                    type="button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#bookingModal"
-                    data-destination="Paris"
-                  >
-                    Explore Paris <span aria-hidden="true">&rarr;</span>
-                  </button>
-                </div>
-              </article>
-            </div>
-            <div class="col">
-              <article class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
-                <div class="ratio ratio-4x3">
-                  <img
-                    src="imgs/777150-3840x2160-desktop-4k-the-taj-mahal-wallpaper-image.jpg"
-                    class="object-fit-cover"
-                    width="3840"
-                    height="2160"
-                    alt="The Taj Mahal and its reflecting pool in Agra"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-                <div class="card-body p-4 d-flex flex-column">
-                  <p class="small text-body-secondary mb-2">
-                    INDIA <span aria-hidden="true">&middot;</span> HERITAGE TRAIL
-                  </p>
-                  <h3 class="card-title h4 fw-bold">Agra</h3>
-                  <p class="card-text text-body-secondary">
-                    Marvel at the Taj Mahal, explore Mughal architecture, and taste local
-                    favourites.
-                  </p>
-                  <button
-                    class="btn btn-outline-dark rounded-pill align-self-start mt-auto"
-                    type="button"
-                    data-bs-toggle="modal"
-                    data-bs-target="#bookingModal"
-                    data-destination="Agra"
-                  >
-                    Explore Agra <span aria-hidden="true">&rarr;</span>
-                  </button>
-                </div>
-              </article>
             </div>
           </div>
         </div>
@@ -492,8 +263,9 @@
                 <div class="card-body p-4 d-flex flex-column">
                   <span
                     class="badge bg-warning-subtle text-warning-emphasis rounded-pill align-self-start mb-3"
-                    >Heritage &amp; discovery</span
                   >
+                    Heritage &amp; discovery
+                  </span>
                   <h3 class="h4 fw-bold">Agra Heritage Escape</h3>
                   <p class="text-body-secondary small mb-3">
                     7 days <span aria-hidden="true">/</span> 6 nights
@@ -507,16 +279,10 @@
                     <p class="h3 fw-bold mb-3">
                       &#8377;18,000 <span class="fs-6 fw-normal text-body-secondary">/ person</span>
                     </p>
-                    <button
-                      class="btn btn-dark w-100 rounded-pill py-2"
-                      type="button"
-                      data-bs-toggle="modal"
-                      data-bs-target="#bookingModal"
-                      data-destination="Agra"
-                    >
+                    <a class="btn btn-dark w-100 rounded-pill py-2" href="booking.html">
                       Plan this trip<span class="visually-hidden"> to Agra</span>
                       <span aria-hidden="true">&rarr;</span>
-                    </button>
+                    </a>
                   </div>
                 </div>
               </article>
@@ -535,9 +301,9 @@
                   />
                 </div>
                 <div class="card-body p-4 d-flex flex-column">
-                  <span class="badge bg-warning text-dark rounded-pill align-self-start mb-3"
-                    >The scenic city break</span
-                  >
+                  <span class="badge bg-warning text-dark rounded-pill align-self-start mb-3">
+                    The scenic city break
+                  </span>
                   <h3 class="h4 fw-bold">Paris City Getaway</h3>
                   <p class="text-body-secondary small mb-3">
                     6 days <span aria-hidden="true">/</span> 5 nights
@@ -550,16 +316,10 @@
                     <p class="h3 fw-bold mb-3">
                       &#8377;78,000 <span class="fs-6 fw-normal text-body-secondary">/ person</span>
                     </p>
-                    <button
-                      class="btn btn-warning w-100 rounded-pill py-2 fw-semibold"
-                      type="button"
-                      data-bs-toggle="modal"
-                      data-bs-target="#bookingModal"
-                      data-destination="Paris"
-                    >
+                    <a class="btn btn-warning w-100 rounded-pill py-2 fw-semibold" href="booking.html">
                       Plan this trip<span class="visually-hidden"> to Paris</span>
                       <span aria-hidden="true">&rarr;</span>
-                    </button>
+                    </a>
                   </div>
                 </div>
               </article>
@@ -580,8 +340,9 @@
                 <div class="card-body p-4 d-flex flex-column">
                   <span
                     class="badge bg-warning-subtle text-warning-emphasis rounded-pill align-self-start mb-3"
-                    >City lights &amp; new sights</span
                   >
+                    City lights &amp; new sights
+                  </span>
                   <h3 class="h4 fw-bold">Tokyo Discovery</h3>
                   <p class="text-body-secondary small mb-3">
                     6 days <span aria-hidden="true">/</span> 5 nights
@@ -595,302 +356,35 @@
                     <p class="h3 fw-bold mb-3">
                       &#8377;49,000 <span class="fs-6 fw-normal text-body-secondary">/ person</span>
                     </p>
-                    <button
-                      class="btn btn-dark w-100 rounded-pill py-2"
-                      type="button"
-                      data-bs-toggle="modal"
-                      data-bs-target="#bookingModal"
-                      data-destination="Tokyo"
-                    >
+                    <a class="btn btn-dark w-100 rounded-pill py-2" href="booking.html">
                       Plan this trip<span class="visually-hidden"> to Tokyo</span>
                       <span aria-hidden="true">&rarr;</span>
-                    </button>
+                    </a>
                   </div>
                 </div>
               </article>
-            </div>
-          </div>
-          <p class="small text-body-secondary text-center mt-4 mb-0">
-            Illustrative prices per person. Final costs and inclusions depend on your dates and
-            itinerary.
-          </p>
-        </div>
-      </section>
-
-      <section id="faqs" class="py-5" aria-labelledby="faqHeading">
-        <div class="container py-lg-3">
-          <div class="row g-4 g-lg-5">
-            <div class="col-lg-4">
-              <p class="small fw-bold text-uppercase text-warning-emphasis mb-2">Good to know</p>
-              <h2 id="faqHeading" class="fw-bold">A few things before you go</h2>
-              <p class="text-body-secondary mb-0">A little clarity for your next adventure.</p>
-            </div>
-            <div class="col-lg-8">
-              <div class="accordion shadow-sm rounded-3 overflow-hidden" id="holidayFaq">
-                <div class="accordion-item">
-                  <h3 class="accordion-header">
-                    <button
-                      class="accordion-button"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faqCustomise"
-                      aria-expanded="true"
-                      aria-controls="faqCustomise"
-                    >
-                      Can I customise a trip?
-                    </button>
-                  </h3>
-                  <div
-                    id="faqCustomise"
-                    class="accordion-collapse collapse show"
-                    data-bs-parent="#holidayFaq"
-                  >
-                    <div class="accordion-body text-body-secondary">
-                      Yes. Choose a destination and use the trip form to add your dates, group size,
-                      and preferences. The packages are a starting point for your plans.
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h3 class="accordion-header">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faqPrices"
-                      aria-expanded="false"
-                      aria-controls="faqPrices"
-                    >
-                      What do the package prices include?
-                    </button>
-                  </h3>
-                  <div
-                    id="faqPrices"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#holidayFaq"
-                  >
-                    <div class="accordion-body text-body-secondary">
-                      These are sample starting prices, not confirmed quotes. Hotels, transport,
-                      activities, flights, and other inclusions would need to be confirmed for your
-                      itinerary before booking.
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h3 class="accordion-header">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faqBooking"
-                      aria-expanded="false"
-                      aria-controls="faqBooking"
-                    >
-                      Will the trip form make a booking?
-                    </button>
-                  </h3>
-                  <div
-                    id="faqBooking"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#holidayFaq"
-                  >
-                    <div class="accordion-body text-body-secondary">
-                      The form creates a preview of your trip request on this page. This demo does
-                      not send an enquiry, confirm a booking, or take a payment.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="pb-5" aria-labelledby="contactHeading">
-        <div class="container">
-          <div class="bg-dark text-white rounded-4 p-4 p-lg-5 shadow">
-            <div class="row align-items-center g-4">
-              <div class="col-lg-8">
-                <p class="small fw-bold text-uppercase text-warning mb-2">
-                  Somewhere new is calling
-                </p>
-                <h2 id="contactHeading" class="fw-bold mb-3">
-                  Let's make room for your next getaway.
-                </h2>
-                <p class="text-white-50 mb-0">
-                  Pick a place, share your dates, and start shaping your trip.
-                </p>
-              </div>
-              <div class="col-lg-4 text-lg-end">
-                <button
-                  class="btn btn-warning btn-lg rounded-pill fw-semibold px-4"
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#bookingModal"
-                >
-                  Plan a trip <span aria-hidden="true">&rarr;</span>
-                </button>
-              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- All trip buttons reuse this modal; data-destination prefills the selected city. -->
-    <div
-      class="modal fade"
-      id="bookingModal"
-      tabindex="-1"
-      aria-labelledby="bookingModalLabel"
-      aria-describedby="bookingNote"
-      aria-hidden="true"
-    >
-      <div
-        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable modal-fullscreen-sm-down"
-      >
-        <div class="modal-content border-0 rounded-4 shadow">
-          <div class="modal-header px-4 py-3">
-            <h2 class="modal-title fs-4 fw-bold" id="bookingModalLabel">Plan your next escape</h2>
-            <button
-              class="btn-close"
-              type="button"
-              data-bs-dismiss="modal"
-              aria-label="Close trip form"
-            ></button>
-          </div>
-          <div class="modal-body p-4">
-            <p id="bookingNote" class="text-body-secondary small mb-4">
-              Preview a trip request below. This demo does not send your details, confirm a booking,
-              or take a payment.
-            </p>
-            <form id="bookingForm">
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <label for="fullName" class="form-label">Full name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="fullName"
-                    name="fullName"
-                    placeholder="Your full name"
-                    autocomplete="name"
-                    pattern=".*\S.*"
-                    maxlength="100"
-                    required
-                  />
-                </div>
-                <div class="col-md-6">
-                  <label for="email" class="form-label">Email address</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    name="email"
-                    placeholder="you@example.com"
-                    autocomplete="email"
-                    required
-                  />
-                </div>
-                <div class="col-md-6">
-                  <label for="destination" class="form-label">Destination</label>
-                  <select class="form-select" id="destination" name="destination" required>
-                    <option value="" selected disabled>Choose a destination</option>
-                    <option value="Agra">Agra, India</option>
-                    <option value="Paris">Paris, France</option>
-                    <option value="Tokyo">Tokyo, Japan</option>
-                  </select>
-                </div>
-                <div class="col-md-6">
-                  <label for="travelDate" class="form-label">Departure date</label>
-                  <input
-                    type="date"
-                    class="form-control"
-                    id="travelDate"
-                    name="travelDate"
-                    required
-                  />
-                </div>
-                <div class="col-md-6">
-                  <label for="travellers" class="form-label">Number of travellers</label>
-                  <input
-                    type="number"
-                    class="form-control"
-                    id="travellers"
-                    name="travellers"
-                    value="2"
-                    min="1"
-                    step="1"
-                    required
-                  />
-                </div>
-                <div class="col-12">
-                  <label for="tripNotes" class="form-label"
-                    >What would make this trip special?
-                    <span class="text-body-secondary small">(optional)</span></label
-                  >
-                  <textarea
-                    class="form-control"
-                    id="tripNotes"
-                    name="tripNotes"
-                    rows="3"
-                    maxlength="1000"
-                    placeholder="Tell us about your interests, travel pace, or special requests."
-                  ></textarea>
-                </div>
-              </div>
-            </form>
-            <div
-              class="alert alert-warning d-none mt-4 mb-0"
-              id="bookingPreview"
-              role="status"
-              tabindex="-1"
-            >
-              <h3 class="h6 fw-bold">Your trip request preview</h3>
-              <p id="previewSummary" class="text-break mb-2"></p>
-              <p id="previewNotes" class="small text-break mb-2"></p>
-              <p class="small mb-0">
-                Nothing has been sent or booked. Close the form or change your details to keep
-                exploring.
-              </p>
-            </div>
-          </div>
-          <div class="modal-footer px-4">
-            <button
-              class="btn btn-outline-secondary rounded-pill"
-              type="button"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button
-              class="btn btn-warning rounded-pill fw-semibold px-4"
-              type="submit"
-              form="bookingForm"
-            >
-              Preview trip request
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <footer class="bg-white border-top py-4">
       <div class="container">
         <div
           class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3"
         >
-          <a class="fs-4 fw-bold text-dark text-decoration-none" href="#top"
-            >Holiday<span class="text-warning-emphasis">.</span></a
-          >
+          <a class="fs-4 fw-bold text-dark text-decoration-none" href="#top">
+            Holiday<span class="text-warning-emphasis">.</span>
+          </a>
           <nav class="nav justify-content-center" aria-label="Footer navigation">
-            <a class="nav-link px-2 link-secondary" href="#destinations">Destinations</a>
+            <a class="nav-link px-2 link-secondary" href="destination.html">Destinations</a>
             <a class="nav-link px-2 link-secondary" href="#packages">Packages</a>
-            <a class="nav-link px-2 link-secondary" href="#faqs">FAQs</a>
+            <a class="nav-link px-2 link-secondary" href="#top">Home</a>
             <a class="nav-link px-2 link-secondary" href="#why-holiday">About</a>
-            <a class="nav-link px-2 link-secondary" href="#top"
-              >Back to top <span aria-hidden="true">&uarr;</span></a
-            >
+            <a class="nav-link px-2 link-secondary" href="#top">
+              Back to top <span aria-hidden="true">&uarr;</span>
+            </a>
           </nav>
         </div>
         <p class="small text-body-secondary text-center text-md-start border-top pt-3 mt-3 mb-0">
@@ -898,98 +392,5 @@
         </p>
       </div>
     </footer>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      const bookingModal = document.getElementById("bookingModal");
-      const bookingForm = document.getElementById("bookingForm");
-      const destination = document.getElementById("destination");
-      const travelDate = document.getElementById("travelDate");
-      const bookingPreview = document.getElementById("bookingPreview");
-
-      // Use the visitor's local date so departures cannot be set in the past.
-      function setMinimumDate() {
-        const today = new Date();
-        const month = String(today.getMonth() + 1).padStart(2, "0");
-        const day = String(today.getDate()).padStart(2, "0");
-        travelDate.min = today.getFullYear() + "-" + month + "-" + day;
-      }
-
-      bookingModal.addEventListener("show.bs.modal", (event) => {
-        setMinimumDate();
-        destination.value = event.relatedTarget?.dataset.destination || "";
-        bookingPreview.classList.add("d-none");
-      });
-
-      bookingForm.addEventListener("input", () => {
-        bookingPreview.classList.add("d-none");
-      });
-
-      // Native HTML validation runs before a valid submit; this only builds a preview.
-      bookingForm.addEventListener("submit", (event) => {
-        event.preventDefault();
-        setMinimumDate();
-        if (!bookingForm.reportValidity()) return;
-
-        const name = document.getElementById("fullName").value.trim();
-        const travellers = document.getElementById("travellers").value;
-        const notes = document.getElementById("tripNotes").value.trim();
-        const date = new Date(travelDate.value + "T00:00:00").toLocaleDateString("en-IN", {
-          day: "numeric",
-          month: "long",
-          year: "numeric",
-        });
-
-        // textContent treats user input as plain text, rather than interpreting HTML.
-        document.getElementById("previewSummary").textContent =
-          name +
-          ", your plan is " +
-          destination.value +
-          " on " +
-          date +
-          " for " +
-          travellers +
-          (Number(travellers) === 1 ? " traveller." : " travellers.");
-        document.getElementById("previewNotes").textContent = notes
-          ? "Your preferences: " + notes
-          : "";
-        bookingPreview.classList.remove("d-none");
-        bookingPreview.focus();
-      });
-
-      // Close the expanded mobile menu after an in-page link or booking button is chosen.
-      const mainNav = document.getElementById("mainNav");
-      mainNav.addEventListener("click", (event) => {
-        const link = event.target.closest(".nav-link");
-        const toggler = document.querySelector(".navbar-toggler");
-        if (!link || toggler.getAttribute("aria-expanded") !== "true") return;
-
-        const menu = bootstrap.Collapse.getOrCreateInstance(mainNav, { toggle: false });
-        const anchor = link.getAttribute("href");
-        if (anchor && anchor.startsWith("#")) {
-          // Scroll after the menu closes so its changing height cannot shift the target.
-          event.preventDefault();
-          mainNav.addEventListener(
-            "hidden.bs.collapse",
-            () => {
-              history.pushState(null, "", anchor);
-              document.querySelector(anchor).scrollIntoView();
-            },
-            { once: true },
-          );
-        }
-
-        if (mainNav.classList.contains("show")) {
-          menu.hide();
-        } else if (mainNav.classList.contains("collapsing")) {
-          // A quick tap may arrive before the opening animation has finished.
-          mainNav.addEventListener("shown.bs.collapse", () => menu.hide(), { once: true });
-        }
-      });
-    </script>
   </body>
 </html>
