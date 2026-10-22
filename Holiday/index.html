@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+      *{
+        box-sizing: border-box;
+
+      }
+      html,body{
+        overflow-x: hidden;
+      }
+
+    
+
+    </style>
   </head>
   <body>
     <div class="container-fluid px-0">
@@ -23,7 +35,7 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Destination</a>
+          <a class="nav-link" href="destination.html">Destination</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Packages</a>
@@ -111,6 +123,171 @@
 </div>
 
     </div>
+
+    <div class="container-fluid px-0 m-5 mx-0 fw-bold">
+<div class="row">
+  <div class="col-12">
+    <h2 class="text-center">Popular Destinations</h2>
+  </div>
+</div>
+</div>
+
+<div class="container-fluid mx-5">
+<div class="row">
+  <div class="col-4">
+    <div class="card shadow-sm p-3 mb-5 bg-body rounded" style="width: 18rem;">
+  <img src="imgs/1390508-3840x2160-desktop-4k-japan-skyline-background-photo.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Tokyo</h5>
+    <p class="card-text">Vist the viberent tokyo towers</p>
+    <a href="#" class="btn btn-primary">Explore</a>
+  </div>
+</div>
+  </div>
+  <div class="col-4">
+<div class="card shadow-sm p-3 mb-5 bg-body rounded" style="width: 18rem;">
+  <img src="imgs/30528-3840x2160-desktop-4k-eiffel-tower-background-image.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Paris</h5>
+    <p class="card-text">Enjoy the Cold paris</p>
+    <a href="#" class="btn btn-primary">Explore</a>
+  </div>
+</div>
+</div>
+<div class="col-4">
+<div class="card shadow-sm p-3 mb-5 bg-body rounded" style="width: 18rem;">
+  <img src="imgs/777150-3840x2160-desktop-4k-the-taj-mahal-wallpaper-image.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Agra</h5>
+    <p class="card-text">Enjoy the rich flavour full Food</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>
+    
+  
+</div>
+</div>
+
+  <div class="container-fluid px-0 m-5 mx-0 fw-bold">
+<div class="row">
+  <div class="col-12">
+    <h2 class="text-center">Travle Packages</h2>
+    <p class="text-center">Selecy Packages talor made best for you!</p>
+  </div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+  <div class="col-sm-4 mb-3 mb-sm-0">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Special Agra package Offer</h5>
+        <p class="card-text">7 Days / 8 Nights</p>
+        <h4 class="card-text text-success fw-bold">₹18,000</h4>
+        <div class="d-grid gap-2">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Special Paris package Offer</h5>
+        <p class="card-text">6 Days / 7 Nights</p>
+        <h4 class="card-text text-success fw-bold">₹78,000</h4>
+        <div class="d-grid gap-2">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Special Japan Package Offer</h5>
+        <p class="card-text">6 Days / 7 Nights</p>
+        <h4 class="card-text text-success fw-bold">₹49,000</h4>
+        <div class="d-grid gap-2">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+    </div>
+<!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-light">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Book Your Trip!</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+        <form action="">
+          <div class="row">
+            <div class="col-6"><div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Full Name</label>
+  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Holiday">
+</div>
+</div>
+            <div class="col-6"><div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+</div>
+</div>
+          </div>
+
+   <div class="row">
+    <div class="col-6">
+            <label for="exampleFormControlInput1" class="form-label">Select Destination</label>
+            <div c><select class="form-select" aria-label="Default select example">
+       
+  <option selected>Open this select menu</option>
+  <option value="1">Agra</option>
+  <option value="2">Tokyo</option>
+  <option value="3">Paris</option>
+</select>
+ </div>
+    </div>
+
+<div class="col-6"><div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Date</label>
+  <input type="Date" class="form-control" id="exampleFormControlInput1">
+</div>
+</div>
+
+  
+          </div>
+
+          <div class="col-12"><div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Number of People</label>
+  <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="0">
+</div>
+</div>
+
+
+
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Discription</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="I would like to go to"></textarea>
+</div>
+
+
+        </form>
+      </div>
+      <div class="d-grid gap-2 mb-3 m-3">
+  <button class="btn btn-primary" type="button">Save</button>
+</div>
+    </div>
+  </div>
+</div>
+<footer class="py-3 my-4"> <ul class="nav justify-content-center border-bottom pb-3 mb-3"> <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li> <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Packages</a></li> <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary"></a></li> <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li> <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li> </ul> <p class="text-center text-body-secondary">© 2026 Holiday Travle Website | Desinged using Bootstrap</p> </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
 </html>
