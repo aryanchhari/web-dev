@@ -23,6 +23,11 @@
       .carousel-panel {
         scroll-snap-align: start;
       }
+
+      /* An anchor link opens the form; no JavaScript is needed. */
+      .booking-modal:target {
+        display: block;
+      }
     </style>
   </head>
   <body id="top" class="bg-body-tertiary">
@@ -43,7 +48,7 @@
             <a class="nav-link" href="#packages">Packages</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="booking.html">Booking</a>
+            <a class="nav-link" href="#bookingModal">Booking</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
@@ -279,7 +284,7 @@
                     <p class="h3 fw-bold mb-3">
                       &#8377;18,000 <span class="fs-6 fw-normal text-body-secondary">/ person</span>
                     </p>
-                    <a class="btn btn-dark w-100 rounded-pill py-2" href="booking.html">
+                    <a class="btn btn-dark w-100 rounded-pill py-2" href="#bookingModal">
                       Plan this trip<span class="visually-hidden"> to Agra</span>
                       <span aria-hidden="true">&rarr;</span>
                     </a>
@@ -316,7 +321,7 @@
                     <p class="h3 fw-bold mb-3">
                       &#8377;78,000 <span class="fs-6 fw-normal text-body-secondary">/ person</span>
                     </p>
-                    <a class="btn btn-warning w-100 rounded-pill py-2 fw-semibold" href="booking.html">
+                    <a class="btn btn-warning w-100 rounded-pill py-2 fw-semibold" href="#bookingModal">
                       Plan this trip<span class="visually-hidden"> to Paris</span>
                       <span aria-hidden="true">&rarr;</span>
                     </a>
@@ -356,7 +361,7 @@
                     <p class="h3 fw-bold mb-3">
                       &#8377;49,000 <span class="fs-6 fw-normal text-body-secondary">/ person</span>
                     </p>
-                    <a class="btn btn-dark w-100 rounded-pill py-2" href="booking.html">
+                    <a class="btn btn-dark w-100 rounded-pill py-2" href="#bookingModal">
                       Plan this trip<span class="visually-hidden"> to Tokyo</span>
                       <span aria-hidden="true">&rarr;</span>
                     </a>
@@ -368,6 +373,57 @@
         </div>
       </section>
     </main>
+
+    <!-- Each package opens this shared trip form. -->
+    <div class="modal booking-modal bg-dark bg-opacity-50" id="bookingModal" tabindex="-1" role="dialog" aria-labelledby="bookingTitle">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable modal-fullscreen-sm-down">
+        <div class="modal-content border-0 rounded-4 shadow">
+          <div class="modal-header px-4 py-3">
+            <h2 class="modal-title fs-4 fw-bold" id="bookingTitle">Book your trip</h2>
+            <a class="btn-close" href="#packages" aria-label="Close trip form"></a>
+          </div>
+          <div class="modal-body p-4">
+            <form id="bookingForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="fullName" class="form-label">Full name</label>
+                  <input class="form-control" type="text" id="fullName" placeholder="Your full name" autocomplete="name" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email address</label>
+                  <input class="form-control" type="email" id="email" placeholder="name@example.com" autocomplete="email" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="destination" class="form-label">Select destination</label>
+                  <select class="form-select" id="destination" required>
+                    <option value="" selected disabled>Choose a destination</option>
+                    <option value="Agra">Agra</option>
+                    <option value="Tokyo">Tokyo</option>
+                    <option value="Paris">Paris</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="travelDate" class="form-label">Departure date</label>
+                  <input class="form-control" type="date" id="travelDate" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="travellers" class="form-label">Number of people</label>
+                  <input class="form-control" type="number" id="travellers" value="1" min="1" step="1" required>
+                </div>
+                <div class="col-12">
+                  <label for="tripNotes" class="form-label">Description</label>
+                  <textarea class="form-control" id="tripNotes" rows="3" placeholder="Tell us about your trip"></textarea>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer px-4">
+            <button class="btn btn-outline-secondary rounded-pill" type="reset" form="bookingForm">Clear form</button>
+            <a class="btn btn-warning rounded-pill fw-semibold px-4" href="#packages">Close</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <footer class="bg-white border-top py-4">
       <div class="container">
