@@ -24,14 +24,13 @@
         scroll-snap-align: start;
       }
 
-      /* An anchor link opens the form; no JavaScript is needed. */
+      /* This is so we can use the booking button */
       .booking-modal:target {
         display: block;
       }
     </style>
   </head>
   <body id="top" class="bg-body-tertiary">
-    <!-- The links stay visible on mobile, so the navbar needs no menu script. -->
     <nav class="navbar navbar-expand bg-dark shadow-sm py-3" data-bs-theme="dark">
       <div class="container flex-column flex-lg-row gap-3">
         <a class="navbar-brand fw-bold fs-3" href="#top">
@@ -61,7 +60,7 @@
     </nav>
 
     <main>
-      <!-- Scroll sideways or use the arrows to change slides without JavaScript. -->
+      <!-- This can be used so we dont need to click the next button we can just scroll -->
       <div id="holidayCarousel" class="position-relative" aria-label="Featured destinations">
         <div class="carousel-slides d-flex overflow-x-auto">
           <div id="agraSlide" class="carousel-panel position-relative w-100 flex-shrink-0">
