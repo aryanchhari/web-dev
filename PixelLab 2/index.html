@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pixel Lab: a hands-on playground for display panels, pixels and motion."
+    />
+    <title>Compare lab | Pixel Lab</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="header">
+      <a class="logo" href="index.html" aria-label="Pixel Lab home"
+        ><span class="logo-mark" aria-hidden="true">▦</span> pixel
+        <span>lab</span><span class="logo-dot">.</span></a
+      >
+      <nav class="nav" aria-label="Main navigation">
+        <a class="nav-link active" href="index.html" aria-current="page"
+          >Compare lab</a
+        >
+        <a class="nav-link" href="insidepixel.html">Inside a pixel</a>
+        <a class="nav-link" href="motion.html">Motion test</a>
+        <a class="nav-link" href="challenge.html">Challenge</a>
+        <a class="nav-link panel-link" href="findpanel.html">Find my panel</a>
+      </nav>
+    </header>
+
+    <main class="main" id="main">
+      <noscript
+        ><p class="notice">
+          Enable JavaScript to use the lab controls, challenge and panel finder.
+        </p></noscript
+      >
+      <section class="heading">
+        <div class="heading-top">
+          <p class="eyebrow">THE DISPLAY PLAYGROUND</p>
+          <span class="status"><span>●</span> Lab 01 / Compare</span>
+        </div>
+        <h1>Same pixels.<br /><span>Different worlds.</span></h1>
+        <p class="intro">
+          A hands-on look at the screens you look at every day.<br />Choose two
+          panels. Change the scene. Get curious.
+        </p>
+      </section>
+
+      <section class="comparison" aria-label="Interactive panel comparison">
+        <aside class="control-card">
+          <p class="eyebrow">YOUR EXPERIMENT</p>
+          <h2>Set the scene.</h2>
+          <label for="panelA">Display A</label>
+          <select id="panelA" onchange="updateComparison()">
+            <option value="0">IPS LCD</option>
+            <option value="1">VA LCD</option>
+            <option value="2">TN LCD</option>
+            <option value="3">OLED</option>
+          </select>
+          <label for="panelB">Display B</label>
+          <select id="panelB" onchange="updateComparison()">
+            <option value="0">IPS LCD</option>
+            <option value="1">VA LCD</option>
+            <option value="2">TN LCD</option>
+            <option value="3" selected>OLED</option>
+          </select>
+          <button
+            class="button secondary full-width"
+            type="button"
+            onclick="swapPanels()"
+          >
+            ⇄ Swap displays
+          </button>
+          <div class="control-divider"></div>
+          <label for="pattern">Test pattern</label>
+          <select id="pattern" onchange="updateComparison()">
+            <option value="spectrum">Spectrum</option>
+            <option value="night">Night lights</option>
+            <option value="checker">Checkerboard</option>
+            <option value="grayscale">Grayscale</option>
+          </select>
+          <label for="room">Ambient light</label>
+          <select id="room" onchange="updateComparison()">
+            <option value="dark">Dark room</option>
+            <option value="bright">Bright room</option>
+          </select>
+          <label for="angle">Viewing angle</label>
+          <select id="angle" onchange="updateComparison()">
+            <option value="front">Straight on</option>
+            <option value="side">From the side</option>
+          </select>
+          <button class="text-button" type="button" onclick="resetComparison()">
+            Reset experiment ↺
+          </button>
+        </aside>
+
+        <div class="experiment">
+          <div class="section-top">
+            <p class="eyebrow">COMPARISON LAB</p>
+            <span id="conditionLabel">Dark room · Straight on</span>
+          </div>
+          <div class="screens">
+            <article class="display">
+              <div class="display-top">
+                <h2 id="nameA">IPS LCD</h2>
+                <span class="tag">DISPLAY A</span>
+              </div>
+              <div class="screen" id="screenA">
+                <div
+                  class="pattern-art spectrum"
+                  id="patternA"
+                  aria-hidden="true"
+                >
+                  <div class="orb"></div>
+                  <div class="city"></div>
+                </div>
+                <div class="black-level">
+                  <span>BLACK LEVEL</span><span>↓</span>
+                </div>
+              </div>
+              <div class="monitor-base" aria-hidden="true"></div>
+              <p id="descriptionA">
+                Wide viewing angles. Everyday versatility.
+              </p>
+              <span class="small-label" id="lightA">BACKLIT LCD</span>
+            </article>
+            <article class="display">
+              <div class="display-top">
+                <h2 id="nameB">OLED</h2>
+                <span class="tag">DISPLAY B</span>
+              </div>
+              <div class="screen" id="screenB">
+                <div
+                  class="pattern-art spectrum"
+                  id="patternB"
+                  aria-hidden="true"
+                >
+                  <div class="orb"></div>
+                  <div class="city"></div>
+                </div>
+                <div class="black-level">
+                  <span>BLACK LEVEL</span><span>↓</span>
+                </div>
+              </div>
+              <div class="monitor-base" aria-hidden="true"></div>
+              <p id="descriptionB">Each pixel makes its own light.</p>
+              <span class="small-label" id="lightB">SELF-EMISSIVE</span>
+            </article>
+          </div>
+          <p class="note">
+            Concept illustrations, not measurements. Black levels, colour shifts
+            and room effects are exaggerated to explain the idea. Your own
+            screen limits what you can see.
+          </p>
+          <div class="insight" aria-live="polite">
+            <span class="insight-icon" aria-hidden="true">↗</span>
+            <div>
+              <h3 id="insightTitle">Light behind. Light within.</h3>
+              <p id="insightText">
+                LCD panels use a backlight. OLED pixels emit their own light.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-top">
+          <div>
+            <p class="eyebrow">BEYOND THE PIXELS</p>
+            <h2>The differences, at a glance.</h2>
+          </div>
+          <span class="muted">General traits · Models vary</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <caption class="visually-hidden">
+              Characteristics of your selected display panels
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">What matters</th>
+                <th scope="col" id="tableA">IPS LCD</th>
+                <th scope="col" id="tableB">OLED</th>
+              </tr>
+            </thead>
+            <tbody id="comparisonRows"></tbody>
+          </table>
+        </div>
+        <p class="note">
+          LCD examples here assume a conventional backlight. Local dimming and
+          Mini LED can change dark-scene performance. Panel type alone does not
+          tell you how good a monitor is.
+        </p>
+      </section>
+
+      <section class="next-grid" aria-label="Explore the other labs">
+        <a class="next-card" href="insidepixel.html"
+          ><span class="eyebrow">02 / LOOK CLOSER</span>
+          <h3>Inside a pixel <span>↗</span></h3>
+          <p>Where does the light come from?</p></a
+        >
+        <a class="next-card" href="motion.html"
+          ><span class="eyebrow">03 / KEEP MOVING</span>
+          <h3>Motion test <span>↗</span></h3>
+          <p>See the space between frames.</p></a
+        >
+        <a class="next-card" href="challenge.html"
+          ><span class="eyebrow">04 / YOUR TURN</span>
+          <h3>Take the challenge <span>↗</span></h3>
+          <p>Eight questions. A sharper eye.</p></a
+        >
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="logo footer-logo" href="index.html">pixel <span>lab</span>.</a>
+      <p>A little curiosity. A whole new way to see.</p>
+      <a href="insidepixel.html#reading">Reading room ↗</a>
+    </footer>
+    <script src="js/data.js"></script>
+    <script src="js/compare.js"></script>
+  </body>
+</html>

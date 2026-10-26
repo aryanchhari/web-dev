@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pixel Lab: a hands-on playground for display panels, pixels and motion."
+    />
+    <title>Inside a pixel | Pixel Lab</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="header">
+      <a class="logo" href="index.html" aria-label="Pixel Lab home"
+        ><span class="logo-mark" aria-hidden="true">▦</span> pixel
+        <span>lab</span><span class="logo-dot">.</span></a
+      >
+      <nav class="nav" aria-label="Main navigation">
+        <a class="nav-link" href="index.html">Compare lab</a>
+        <a class="nav-link active" href="insidepixel.html" aria-current="page"
+          >Inside a pixel</a
+        >
+        <a class="nav-link" href="motion.html">Motion test</a>
+        <a class="nav-link" href="challenge.html">Challenge</a>
+        <a class="nav-link panel-link" href="findpanel.html">Find my panel</a>
+      </nav>
+    </header>
+
+    <main class="main" id="main">
+      <noscript
+        ><p class="notice">
+          Enable JavaScript to use the lab controls, challenge and panel finder.
+        </p></noscript
+      >
+      <section class="heading">
+        <div class="heading-top">
+          <p class="eyebrow">LOOK A LITTLE CLOSER</p>
+          <span class="status">Lab 02 / Discover</span>
+        </div>
+        <h1>A whole world.<br /><span>Inside a pixel.</span></h1>
+        <p class="intro">
+          Millions of tiny building blocks. Two very different ways to light
+          them.
+        </p>
+      </section>
+
+      <section class="pixel-layout">
+        <div class="pixel-controls control-card">
+          <p class="eyebrow">01 / PICK A TECHNOLOGY</p>
+          <div class="button-row">
+            <button
+              id="ipsButton"
+              class="button selected"
+              type="button"
+              aria-pressed="true"
+              onclick="changePixelType('ips')"
+            >
+              IPS LCD</button
+            ><button
+              id="oledButton"
+              class="button secondary"
+              type="button"
+              aria-pressed="false"
+              onclick="changePixelType('oled')"
+            >
+              OLED
+            </button>
+          </div>
+          <div class="control-divider"></div>
+          <label for="pixelLevel">02 / PIXEL LIGHT LEVEL</label>
+          <div class="range-top">
+            <span>Off</span><strong id="levelLabel">80%</strong
+            ><span>Full</span>
+          </div>
+          <input
+            id="pixelLevel"
+            type="range"
+            min="0"
+            max="100"
+            value="80"
+            oninput="updatePixel()"
+          />
+          <button
+            class="button secondary full-width"
+            type="button"
+            onclick="turnPixelOff()"
+          >
+            Set pixel to black
+          </button>
+          <p class="note">
+            Move the slider all the way left. What happens to the light behind
+            the pixel?
+          </p>
+        </div>
+
+        <div class="pixel-lab">
+          <div class="section-top">
+            <p class="eyebrow">A SIMPLIFIED CUTAWAY</p>
+            <span class="tag" id="pixelBadge">IPS LCD</span>
+          </div>
+          <div class="layer-diagram" id="layerDiagram">
+            <div class="backlight-layer" id="backlightLayer">
+              <span>BACKLIGHT</span><strong>ON</strong
+              ><span>light from behind</span>
+            </div>
+            <span class="layer-arrow" id="layerArrow" aria-hidden="true"
+              >→</span
+            >
+            <div class="pixel-layer">
+              <span class="small-label" id="layerLabel"
+                >LIQUID CRYSTAL + COLOUR FILTERS</span
+              >
+              <div class="subpixels">
+                <div id="redPixel" class="subpixel red-pixel">R</div>
+                <div id="greenPixel" class="subpixel green-pixel">G</div>
+                <div id="bluePixel" class="subpixel blue-pixel">B</div>
+              </div>
+              <span class="small-label">ENLARGED SUBPIXELS</span>
+            </div>
+            <span class="layer-arrow" aria-hidden="true">→</span>
+            <div class="output-layer">
+              <span class="small-label">WHAT YOU SEE</span>
+              <div id="pixelOutput" class="pixel-output"></div>
+              <span class="small-label" id="outputLabel">LIGHT PIXEL</span>
+            </div>
+          </div>
+          <div class="insight" aria-live="polite">
+            <span class="insight-icon" aria-hidden="true">↗</span>
+            <div>
+              <h2 id="pixelTitle">Light through a shutter.</h2>
+              <p id="pixelExplanation">
+                An LCD controls how much light from the backlight passes
+                through. Its pixels do not make their own light.
+              </p>
+            </div>
+          </div>
+          <p class="note">
+            Illustration only. Slider values are not measured luminance. Real
+            subpixel layouts, layers and light output vary by display.
+          </p>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <p class="eyebrow">THE BIG PICTURE</p>
+        <h2>Small details. Big differences.</h2>
+        <div class="feature-grid">
+          <article class="info-card">
+            <span class="card-number">01</span>
+            <h3>One pixel, many parts.</h3>
+            <p>
+              Red, green and blue subpixels combine to produce colours. The
+              exact subpixel arrangement depends on the display.
+            </p>
+          </article>
+          <article class="info-card">
+            <span class="card-number">02</span>
+            <h3>Black is a useful test.</h3>
+            <p>
+              An OLED pixel can stop emitting light. A conventional LCD still
+              has a backlight behind its dark areas.
+            </p>
+          </article>
+          <article class="info-card">
+            <span class="card-number">03</span>
+            <h3>Mini LED is still LCD.</h3>
+            <p>
+              Mini LED describes a backlight approach. Dimming zones help
+              control light behind groups of LCD pixels.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-block glossary">
+        <p class="eyebrow">LESS JARGON. MORE CLARITY.</p>
+        <h2>A pocket display dictionary.</h2>
+        <div class="glossary-row">
+          <button
+            type="button"
+            onclick="toggleTerm(0)"
+            aria-expanded="false"
+            aria-controls="term0"
+          >
+            Resolution <span id="termIcon0">+</span>
+          </button>
+          <div class="term-answer" id="term0">
+            <p>
+              The number of pixels in an image. A 2560 × 1440 display has 2560
+              pixels across and 1440 down. Sharpness also depends on screen size
+              and viewing distance.
+            </p>
+          </div>
+        </div>
+        <div class="glossary-row">
+          <button
+            type="button"
+            onclick="toggleTerm(1)"
+            aria-expanded="false"
+            aria-controls="term1"
+          >
+            Refresh rate <span id="termIcon1">+</span>
+          </button>
+          <div class="term-answer" id="term1">
+            <p>
+              How often a display refreshes each second, measured in hertz. 144
+              Hz means 144 refreshes per second.
+            </p>
+          </div>
+        </div>
+        <div class="glossary-row">
+          <button
+            type="button"
+            onclick="toggleTerm(2)"
+            aria-expanded="false"
+            aria-controls="term2"
+          >
+            Pixel response time <span id="termIcon2">+</span>
+          </button>
+          <div class="term-answer" id="term2">
+            <p>
+              The time a pixel takes to change between levels or colours. It is
+              different from refresh rate and from the total delay between an
+              input and its visible result.
+            </p>
+          </div>
+        </div>
+        <div class="glossary-row">
+          <button
+            type="button"
+            onclick="toggleTerm(3)"
+            aria-expanded="false"
+            aria-controls="term3"
+          >
+            Contrast <span id="termIcon3">+</span>
+          </button>
+          <div class="term-answer" id="term3">
+            <p>
+              The difference between bright and dark parts of an image. Room
+              light, reflections and local dimming also affect what you
+              perceive.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="reading section-block" id="reading">
+        <p class="eyebrow">THE READING ROOM</p>
+        <h2>Keep your curiosity going.</h2>
+        <p>
+          Background reading from display manufacturers. Pixel Lab's drawings
+          and matching rules are educational examples.
+        </p>
+        <div class="reading-links">
+          <a
+            href="https://www.samsung.com/au/monitors/monitor-buying-guide/ip-va-tn-oled/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Samsung / Panel technologies ↗</a
+          ><a
+            href="https://www.lg.com/hk_en/lg-experience/helpful-hints/monitor-types-explained/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LG / IPS, VA and TN ↗</a
+          ><a
+            href="https://www.asus.com/blog/oled-vs-mini-led-vs-lcd/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >ASUS / OLED, Mini LED and LCD ↗</a
+          ><a
+            href="https://www.corsair.com/us/en/explorer/gamer/monitors/monitor-panel-types-explained-va-tn-ips-oled-qd-oled/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Corsair / Panel types explained ↗</a
+          ><a
+            href="https://www.dell.com/en-us/shopping/refresh-rate-monitors"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Dell / Refresh rate and response time ↗</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="logo footer-logo" href="index.html">pixel <span>lab</span>.</a>
+      <p>A little curiosity. A whole new way to see.</p>
+      <a href="insidepixel.html#reading">Reading room ↗</a>
+    </footer>
+    <script src="js/pixel.js"></script>
+  </body>
+</html>

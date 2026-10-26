@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pixel Lab: a hands-on playground for display panels, pixels and motion."
+    />
+    <title>Challenge | Pixel Lab</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="header">
+      <a class="logo" href="index.html" aria-label="Pixel Lab home"
+        ><span class="logo-mark" aria-hidden="true">▦</span> pixel
+        <span>lab</span><span class="logo-dot">.</span></a
+      >
+      <nav class="nav" aria-label="Main navigation">
+        <a class="nav-link" href="index.html">Compare lab</a>
+        <a class="nav-link" href="insidepixel.html">Inside a pixel</a>
+        <a class="nav-link" href="motion.html">Motion test</a>
+        <a class="nav-link active" href="challenge.html" aria-current="page"
+          >Challenge</a
+        >
+        <a class="nav-link panel-link" href="findpanel.html">Find my panel</a>
+      </nav>
+    </header>
+
+    <main class="main" id="main">
+      <noscript
+        ><p class="notice">
+          Enable JavaScript to use the lab controls, challenge and panel finder.
+        </p></noscript
+      >
+      <section class="heading">
+        <div class="heading-top">
+          <p class="eyebrow">A LITTLE KNOWLEDGE CHECK</p>
+          <span class="status">Lab 04 / Challenge</span>
+        </div>
+        <h1>Think you've<br /><span>got the picture?</span></h1>
+        <p class="intro">
+          Eight questions. No timer. Just you and your display knowledge.
+        </p>
+      </section>
+
+      <div class="challenge-layout">
+        <aside class="challenge-intro">
+          <div class="pixel-art-mark" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <p class="eyebrow">THE PIXEL CHALLENGE</p>
+          <h2>Curiosity looks<br />good on you.</h2>
+          <p>
+            Pick an answer, read the explanation, then move to the next
+            question.
+          </p>
+          <p>Need a refresher?</p>
+          <a class="inline-link" href="insidepixel.html">Go inside a pixel ↗</a>
+          <div class="score-strip">
+            <span>CORRECT SO FAR</span><strong id="runningScore">0 / 8</strong>
+          </div>
+        </aside>
+        <section class="quiz-card" aria-label="Display knowledge quiz">
+          <div id="questionArea">
+            <div class="section-top">
+              <span class="eyebrow" id="questionCounter">QUESTION 01 / 08</span
+              ><span class="tag">ONE ANSWER</span>
+            </div>
+            <div class="progress-track"><div id="quizProgress"></div></div>
+            <h2 id="questionTitle" tabindex="-1">
+              Which display can turn individual pixels off to show black?
+            </h2>
+            <div class="answer-list">
+              <button
+                class="answer"
+                id="answer0"
+                type="button"
+                onclick="chooseAnswer(0)"
+              >
+                <span class="answer-letter">A</span
+                ><span id="option0">IPS LCD</span>
+              </button>
+              <button
+                class="answer"
+                id="answer1"
+                type="button"
+                onclick="chooseAnswer(1)"
+              >
+                <span class="answer-letter">B</span
+                ><span id="option1">OLED</span>
+              </button>
+              <button
+                class="answer"
+                id="answer2"
+                type="button"
+                onclick="chooseAnswer(2)"
+              >
+                <span class="answer-letter">C</span
+                ><span id="option2">VA LCD</span>
+              </button>
+              <button
+                class="answer"
+                id="answer3"
+                type="button"
+                onclick="chooseAnswer(3)"
+              >
+                <span class="answer-letter">D</span
+                ><span id="option3">TN LCD</span>
+              </button>
+            </div>
+            <div class="quiz-feedback" id="quizFeedback" aria-live="polite">
+              <p>Choose an answer to reveal the explanation.</p>
+            </div>
+            <div class="quiz-actions">
+              <button class="text-button" type="button" onclick="restartQuiz()">
+                Start again ↺</button
+              ><button
+                class="button"
+                id="nextButton"
+                type="button"
+                onclick="nextQuestion()"
+                disabled
+              >
+                Next question →
+              </button>
+            </div>
+          </div>
+          <div class="quiz-result" id="quizResult" aria-live="polite">
+            <p class="eyebrow">CHALLENGE COMPLETE</p>
+            <div class="result-number" id="finalScore">0<span>/ 8</span></div>
+            <h2 id="resultHeading" tabindex="-1">A sharper eye.</h2>
+            <p id="resultMessage"></p>
+            <div class="button-row">
+              <button class="button" type="button" onclick="restartQuiz()">
+                Try again ↺</button
+              ><a class="button secondary" href="index.html"
+                >Back to the lab ↗</a
+              >
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="bottom-callout">
+        <div>
+          <p class="eyebrow">KNOW THE BASICS. KNOW YOURSELF.</p>
+          <h2>Which panel fits your everyday?</h2>
+        </div>
+        <a class="button secondary" href="findpanel.html">Find my panel ↗</a>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <a class="logo footer-logo" href="index.html">pixel <span>lab</span>.</a>
+      <p>A little curiosity. A whole new way to see.</p>
+      <a href="insidepixel.html#reading">Reading room ↗</a>
+    </footer>
+    <script src="js/challenge.js"></script>
+  </body>
+</html>

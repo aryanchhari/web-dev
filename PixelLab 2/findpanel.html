@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pixel Lab: a hands-on playground for display panels, pixels and motion."
+    />
+    <title>Find my panel | Pixel Lab</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="header">
+      <a class="logo" href="index.html" aria-label="Pixel Lab home"
+        ><span class="logo-mark" aria-hidden="true">▦</span> pixel
+        <span>lab</span><span class="logo-dot">.</span></a
+      >
+      <nav class="nav" aria-label="Main navigation">
+        <a class="nav-link" href="index.html">Compare lab</a>
+        <a class="nav-link" href="insidepixel.html">Inside a pixel</a>
+        <a class="nav-link" href="motion.html">Motion test</a>
+        <a class="nav-link" href="challenge.html">Challenge</a>
+        <a
+          class="nav-link panel-link active"
+          href="findpanel.html"
+          aria-current="page"
+          >Find my panel</a
+        >
+      </nav>
+    </header>
+
+    <main class="main" id="main">
+      <noscript
+        ><p class="notice">
+          Enable JavaScript to use the lab controls, challenge and panel finder.
+        </p></noscript
+      >
+      <section class="heading">
+        <div class="heading-top">
+          <p class="eyebrow">YOUR SCREEN. YOUR EVERYDAY.</p>
+          <span class="status">Lab 05 / Match</span>
+        </div>
+        <h1>Find your<br /><span>kind of pixel.</span></h1>
+        <p class="intro">
+          Tell us how you use your screen. Get a panel type to explore, and the
+          trade-offs to look for.
+        </p>
+      </section>
+
+      <section class="finder-layout">
+        <form class="finder-form" onsubmit="findPanel(event)">
+          <p class="eyebrow">FOUR SMALL QUESTIONS</p>
+          <h2>What's your everyday?</h2>
+          <label for="mainUse">01 / What do you do most?</label
+          ><select id="mainUse">
+            <option value="work">Coding, studying and office work</option>
+            <option value="competitive">Fast, competitive games</option>
+            <option value="movies">Movies and story-driven games</option>
+            <option value="mixed">A little bit of everything</option>
+          </select>
+          <label for="roomType">02 / What's your room like?</label
+          ><select id="roomType">
+            <option value="mixed">Some daylight, some evening use</option>
+            <option value="bright">Usually bright</option>
+            <option value="dark">Usually dark</option>
+          </select>
+          <label for="staticUse">03 / How much stays still on screen?</label
+          ><select id="staticUse">
+            <option value="often">Lots of static windows and toolbars</option>
+            <option value="sometimes">
+              A mix of static and moving content
+            </option>
+            <option value="rarely">Mostly moving content</option>
+          </select>
+          <label for="priority">04 / What matters most?</label
+          ><select id="priority">
+            <option value="balanced">An easy, balanced everyday choice</option>
+            <option value="contrast">
+              Deep blacks and dark-scene contrast
+            </option>
+            <option value="speed">Motion clarity for games</option>
+            <option value="angles">
+              A consistent image from different seats
+            </option>
+          </select>
+          <button class="button full-width" type="submit">
+            Find my panel →</button
+          ><button class="text-button" type="button" onclick="resetFinder()">
+            Reset my answers ↺
+          </button>
+          <p class="note">
+            A simple educational matching rule. It doesn't rank real monitors or
+            account for budget, coating, text clarity or every model's
+            performance.
+          </p>
+        </form>
+        <div class="finder-result" id="finderResult" aria-live="polite">
+          <div id="finderEmpty">
+            <div class="empty-panel-art" aria-hidden="true">
+              <div class="mini-screen"><div></div></div>
+              <span></span>
+            </div>
+            <p class="eyebrow">A GOOD FIT STARTS WITH YOU</p>
+            <h2>Your next screen<br />starts here.</h2>
+            <p>
+              Answer the four questions and we'll explain a sensible starting
+              point.
+            </p>
+            <div class="mini-tags">
+              <span>IPS</span><span>VA</span><span>TN</span><span>OLED</span>
+            </div>
+          </div>
+          <div id="finderAnswer">
+            <p class="eyebrow">YOUR STARTING POINT</p>
+            <h2 id="matchName" tabindex="-1">IPS LCD</h2>
+            <p id="matchSummary" class="match-summary"></p>
+            <div class="match-reason">
+              <span class="small-label">WHY IT FITS</span>
+              <p id="matchReason"></p>
+            </div>
+            <h3>Check before you choose</h3>
+            <ul class="check-list" id="matchChecks"></ul>
+            <div class="alternative">
+              <span class="small-label">ALSO WORTH EXPLORING</span>
+              <p id="alternativeName"></p>
+            </div>
+            <a class="button" href="index.html">Explore Compare Lab ↗</a>
+            <p class="note">
+              An individual monitor can outperform or differ from these broad
+              traits. Check detailed measurements and the manufacturer's care
+              guidance.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <p class="eyebrow">THERE IS NO SINGLE WINNER</p>
+        <h2>Every panel has a personality.</h2>
+        <div class="panel-guide-grid">
+          <article class="info-card">
+            <span class="card-number">IPS</span>
+            <h3>The everyday all-rounder.</h3>
+            <p>
+              A useful place to start for work and mixed use, especially when
+              viewing angles matter.
+            </p>
+          </article>
+          <article class="info-card">
+            <span class="card-number">VA</span>
+            <h3>The contrast-minded LCD.</h3>
+            <p>
+              Often stronger native contrast than IPS. Check dark-transition
+              performance on the actual model.
+            </p>
+          </article>
+          <article class="info-card">
+            <span class="card-number">TN</span>
+            <h3>The focused specialist.</h3>
+            <p>
+              Worth considering for dedicated esports needs. Expect
+              viewing-angle compromises.
+            </p>
+          </article>
+          <article class="info-card">
+            <span class="card-number">OLED</span>
+            <h3>The self-lit showstopper.</h3>
+            <p>
+              Deep blacks and fast pixel transitions. Long-term static use needs
+              extra care.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="logo footer-logo" href="index.html">pixel <span>lab</span>.</a>
+      <p>A little curiosity. A whole new way to see.</p>
+      <a href="insidepixel.html#reading">Reading room ↗</a>
+    </footer>
+    <script src="js/data.js"></script>
+    <script src="js/finder.js"></script>
+  </body>
+</html>
