@@ -1,0 +1,76 @@
+/* Small screens and narrow browser windows. */
+.hero-image {
+  height: 520px;
+}
+
+.hero-title {
+  font-size: 2.25rem;
+}
+
+.hero-description {
+  font-size: 1rem;
+}
+
+.page-title {
+  font-size: 2rem;
+}
+
+/* sm breakpoint */
+@media (min-width: 576px) {
+  .hero-image {
+    height: 540px;
+  }
+
+  .hero-title {
+    font-size: 2.75rem;
+  }
+}
+
+/* md breakpoint */
+@media (min-width: 768px) {
+  .hero-image {
+    height: 560px;
+  }
+
+  .hero-title {
+    font-size: 3.25rem;
+  }
+
+  .hero-description {
+    font-size: 1.125rem;
+  }
+
+  .page-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* lg breakpoint */
+@media (min-width: 992px) {
+  .hero-image {
+    height: 600px;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+  }
+}
+
+/* xl breakpoint: wider laptop and desktop windows. */
+@media (min-width: 1200px) {
+  .hero-image {
+    height: 640px;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .hero-description {
+    font-size: 1.25rem;
+  }
+
+  .page-title {
+    font-size: 3rem;
+  }
+}
