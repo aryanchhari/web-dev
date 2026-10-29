@@ -1,0 +1,73 @@
+{
+    "demoproducts":[
+        {
+            "id" : "1",
+            "title" : "Bottle",
+            "price" : 1700,
+            "image" : "https://www.themessycorner.in/cdn/shop/files/gardenia_jpg.jpg?v=1784722349&width=1080"
+        },
+         {
+            "id" : "2",
+            "title" : "Raiden figuer",
+            "price" : 34000,
+            "image" : "https://m.media-amazon.com/images/I/51ixGyPkc6L._AC_UF1000,1000_QL80_.jpg"
+        },
+         {
+            "id" : "3",
+            "title" : "Logitech Mouse",
+            "price" : 12000,
+            "image" : "https://cdn.jiostore.online/v2/jmd-asp/jdprod/wrkr/products/pictures/item/free/resize-w:460/logitech/494743268/0/eVwPsMzuMu-TseUgxG1K-Logitech-MX-Master-4-Wireless-Mouse-494743268-1.jpg"
+        },
+
+          {
+            "id" : "4",
+            "title" : "Body pillow",
+            "price" : 15000,
+            "image" : "https://www.seevo.in/cdn/shop/files/Diwali_0f6c84b9-54f4-4ac0-85ab-be015a82c960.jpg?v=1792677547"
+        },
+
+        {
+            "id" : "5",
+            "title" : "Nike airforce",
+            "price" : 24000,
+            "image" : "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/a/d/ad22b92Nike-IV5732-002_1.jpg?rnd=20200526195200&tr=w-1536,pr-true"
+        },
+
+         {
+            "id" : "6",
+            "title" : " aplle watch",
+            "price" : 28000,
+            "image" : "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/apple-watch-series-9.png"
+        },
+
+        {
+            "id" : "7",
+            "title" : "Windows laptop",
+            "price" : 79000,
+            "image" : "https://m.media-amazon.com/images/I/710CFplp8+L._AC_UF1000,1000_QL80_.jpg"
+        },
+
+        {
+            "id" : "8",
+            "title" : "Rolex",
+            "price" : 279000,
+            "image" : "https://www.coveted.com/_next/image?url=https%3A%2F%2Fassets.coveted.com%2Fwatches%2Fimages%2Funmapped%2Fv1%2Fgenerated%2Fu2net_final_1726229437_46b9dd2b0ba8_cosmograph_daytona_meteorite_and_black_dial_automatic_men_s_watch_116509mtso.png&w=3840&q=75"
+        },
+
+        {
+            "id" : "9",
+            "title" : "ORS",
+            "price" : 90,
+            "image" : "https://ikonremedies.com/wp-content/uploads/2026/01/ORS-21.8-gm-Dehydrationl.png"
+        },
+
+        {
+            "id" : "10",
+            "title" : "Monitor",
+            "price" : 68000,
+            "image" : "https://dlcdnwebimgs.asus.com/gain/59F76A27-DF1B-4EB6-A47A-9604D403C261/w717/h525/fwebp"
+        }
+
+
+    ]
+}
