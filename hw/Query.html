@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       img {
+            width: 100%;
+            height: auto;
+        }
+
+        .image1 {
+            display: block;
+        }
+
+        .image2 {
+            display: none;
+        }
+
+        @media (max-width: 700px) {
+            .image1 {
+                display: none;
+            }
+
+            .image2 {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/2026_Aston_Martin_Valhalla_SCD_26.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original" class="image1" alt="AS car">
+
+    <img src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/227224/right-side-view.jpeg?isig=0" class="image2" alt="Bike">
+</body>
+</html>
