@@ -42,7 +42,7 @@ function updatePixel() {
     if (level === 0) {
       title = "Black pixel. Backlight still on.";
       explanation =
-        "The pixel is trying to block the light. Some can still pass through, so dark areas may look grey. This drawing exaggerates the effect.";
+        "The pixel is trying to block the light. Some can still pass through, so dark areas may look grey.";
     }
   } else {
     document.getElementById("pixelBadge").innerHTML = "OLED";
@@ -56,7 +56,7 @@ function updatePixel() {
     if (level === 0) {
       title = "Off means no emitted light.";
       explanation =
-        "At black, this illustrated OLED pixel stops emitting light. What you actually see still depends on your own display and room reflections.";
+        "At black, an OLED pixel stops emitting light. Switching off individual pixels gives OLED its deep blacks and strong contrast.";
     }
   }
   document.getElementById("pixelOutput").style.backgroundColor =

@@ -22,7 +22,7 @@ settings. Use the browser at 100% zoom.
 
 | File | What it does |
 | --- | --- |
-| index.html | Compare four panel types, four patterns, room light and viewing angle. Swap or reset the selection. |
+| index.html | Compare panel types, patterns, room light and viewing angle. Explore contrast with a black-level slider and live ratio calculation. |
 | insidepixel.html | Switch between IPS LCD and OLED; change a pixel's illustrated light level; open the glossary explanations. |
 | motion.html | Start/pause a CSS animation; adjust its duration and steps; show an illustrated trail; calculate refresh intervals. |
 | challenge.html | Answer eight questions with immediate explanations, score tracking, results and restart. |
@@ -34,12 +34,13 @@ Every page has the same navigation and footer. No page is an empty placeholder.
 
 - style.css: one shared stylesheet, divided into numbered page sections.
 - js/data.js: shared panel descriptions in an array of objects.
-- js/compare.js: the comparison controls and table.
+- js/compare.js: the comparison controls, table and contrast example.
 - js/pixel.js: the pixel diagram and glossary.
 - js/motion.js: animation controls and refresh-interval calculator.
 - js/challenge.js: question data, answer checking and score logic.
 - js/finder.js: the educational matching rule.
 - favicon.svg: the small pixel logo in the browser tab.
+- PRESENTATION.md: a ten-minute speaking flow, live-demo steps and teacher Q&A.
 
 Each page loads only the scripts it uses, at the end of its body.
 The navigation/footer are written into every HTML file so the pages work when
@@ -88,6 +89,13 @@ The comparison images and pixel levels are exaggerated concept illustrations.
 They do not reproduce another screen's measured colours, contrast or brightness.
 The LCD comparison assumes conventional backlighting; local dimming and Mini LED
 can change performance. Individual monitors vary substantially.
+
+The contrast section uses example white and black luminance values, not panel
+specifications. White stays at 200 cd/m²; the black-level slider runs from 0.05
+to 1.00 cd/m². The formula is white / black: 200 / 0.20 = 1000:1, while
+200 / 0.05 = 4000:1. The scene's grey background illustrates the change; RGB
+values are not a calibrated mapping to physical luminance. The two examples
+do not represent measurements of the computer running the page.
 
 The motion page compares positions per crossing with continuous CSS motion.
 It does not measure or emulate 60/144/240 Hz, FPS, pixel response or input lag.

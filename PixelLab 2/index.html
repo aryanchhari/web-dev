@@ -121,11 +121,6 @@
               <span class="small-label" id="lightB">SELF-EMISSIVE</span>
             </article>
           </div>
-          <p class="note">
-            Concept illustrations, not measurements. Black levels, colour shifts
-            and room effects are exaggerated to explain the idea. Your own
-            screen limits what you can see.
-          </p>
           <div class="insight">
             <span class="insight-icon">↗</span>
             <div>
@@ -138,13 +133,75 @@
         </div>
       </section>
 
+      <section class="section-block" id="contrast">
+        <p class="eyebrow">LIGHT AGAINST DARK</p>
+        <h2>Same white. Different blacks.</h2>
+        <p>
+          Contrast is the difference between the brightest white and the darkest
+          black a screen can produce. Deeper blacks make bright objects stand
+          out and give dark scenes more depth.
+        </p>
+        <div class="contrast-layout">
+          <div class="control-card contrast-controls">
+            <p class="eyebrow">TRY THE CONTRAST EXAMPLE</p>
+            <h3>Change the black level.</h3>
+            <p class="contrast-white">White level in both examples: <strong>200 cd/m²</strong></p>
+            <label for="blackLevel">Black level: <strong id="blackLevelLabel">0.20 cd/m²</strong></label>
+            <input id="blackLevel" type="range" min="5" max="100" value="20" oninput="updateContrast()" />
+            <div class="contrast-range"><span>Deeper black</span><span>Raised black</span></div>
+            <p>Move the slider right to see dark areas become grey and the contrast ratio fall.</p>
+            <button class="text-button" type="button" onclick="resetContrast()">Reset contrast ↺</button>
+          </div>
+          <div class="contrast-examples">
+            <div class="contrast-card">
+              <span class="small-label">YOUR BLACK LEVEL</span>
+              <div class="contrast-scene" id="contrastScene">
+                <span class="contrast-stars">· &nbsp; · &nbsp; +</span>
+                <div class="contrast-moon"></div>
+                <span class="contrast-scene-label">NIGHT SKY</span>
+              </div>
+              <strong class="contrast-ratio" id="contrastRatio">1000:1</strong>
+              <p id="contrastFormula">200 ÷ 0.20 = 1000:1</p>
+            </div>
+            <div class="contrast-card">
+              <span class="small-label">DEEPER BLACKS</span>
+              <div class="contrast-scene contrast-reference">
+                <span class="contrast-stars">· &nbsp; · &nbsp; +</span>
+                <div class="contrast-moon"></div>
+                <span class="contrast-scene-label">NIGHT SKY</span>
+              </div>
+              <strong class="contrast-ratio">4000:1</strong>
+              <p>200 ÷ 0.05 = 4000:1</p>
+            </div>
+          </div>
+        </div>
+        <p class="contrast-rule">Contrast ratio = white level ÷ black level.</p>
+        <div class="contrast-panels">
+          <div class="info-card">
+            <h3>IPS LCD</h3>
+            <p>Wide viewing angles. Light from the backlight can make dark areas look grey.</p>
+          </div>
+          <div class="info-card">
+            <h3>VA LCD</h3>
+            <p>Usually stronger native contrast than conventional IPS or TN, giving dark scenes deeper blacks.</p>
+          </div>
+          <div class="info-card">
+            <h3>TN LCD</h3>
+            <p>Uses a backlight. Contrast and colours shift more when viewed off-centre.</p>
+          </div>
+          <div class="info-card">
+            <h3>OLED</h3>
+            <p>Each pixel emits its own light. Black pixels can switch off without a separate backlight.</p>
+          </div>
+        </div>
+      </section>
+
       <section class="section-block">
         <div class="section-top">
           <div>
             <p class="eyebrow">BEYOND THE PIXELS</p>
             <h2>The differences, at a glance.</h2>
           </div>
-          <span class="muted">General traits · Models vary</span>
         </div>
         <table>
           <thead>
@@ -157,9 +214,8 @@
           <tbody id="comparisonRows"></tbody>
         </table>
         <p class="note">
-          LCD examples here assume a conventional backlight. Local dimming and
-          Mini LED can change dark-scene performance. Panel type alone does not
-          tell you how good a monitor is.
+          Local dimming controls separate backlight zones. Mini LED uses smaller
+          backlight LEDs, helping LCDs produce deeper blacks alongside bright areas.
         </p>
       </section>
 

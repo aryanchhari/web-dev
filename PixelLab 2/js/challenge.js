@@ -54,7 +54,7 @@ let questions = [
     ],
     correct: 0,
     explanation:
-      "VA often has stronger native contrast. Local dimming and individual monitor design can change the comparison.",
+      "VA often blocks the backlight more effectively than conventional IPS, producing deeper blacks and stronger native contrast.",
   },
   {
     question: "What does Mini LED describe in an LCD monitor?",
@@ -82,16 +82,16 @@ let questions = [
   },
   {
     question:
-      "Can this website reproduce another monitor's exact contrast and brightness?",
+      "Two screens have the same white level. Which one has higher contrast?",
     options: [
-      "Yes, with a dark theme",
-      "Yes, in full screen",
-      "Yes, if both are 144 Hz",
-      "No, these are concept illustrations",
+      "The one with the larger stand",
+      "The one with more ports",
+      "The one with a thicker frame",
+      "The one with the lower black level",
     ],
     correct: 3,
     explanation:
-      "You see everything through your own screen. These drawings explain ideas; they are not measurements of another display.",
+      "Contrast ratio is white level divided by black level. With the same white level, a lower black level produces higher contrast.",
   },
 ];
 

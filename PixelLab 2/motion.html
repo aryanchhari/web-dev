@@ -43,7 +43,7 @@
             <option value="24" selected>24 steps / coarse</option>
             <option value="60">60 steps / finer</option>
           </select>
-          <label for="trail">Illustrated trail</label><select id="trail" onchange="updateMotion()">
+          <label for="trail">Motion trail</label><select id="trail" onchange="updateMotion()">
             <option value="off">Off</option>
             <option value="on">On</option>
           </select>
@@ -87,13 +87,8 @@
               </div>
               <span class="track-marker start-marker">START</span><span class="track-marker end-marker">END</span>
             </div>
-            <p>Your browser and display determine the visible updates.</p>
+            <p>CSS interpolates movement between the start and end positions.</p>
           </article>
-          <p class="note">
-            This illustrates stepped motion. It does not measure or emulate a
-            monitor's Hz, FPS, response time or input latency. The optional
-            trail is a drawn effect, not measured ghosting.
-          </p>
         </div>
       </section>
 
@@ -115,7 +110,6 @@
         </div>
         <div class="frame-result">
           <span class="small-label">TIME BETWEEN REFRESHES</span><strong id="frameTime">6.94 <span>ms</span></strong><span class="muted" id="frameFormula">1000 ÷ 144 Hz</span>
-          <p>Calculated interval.<br />Not your measured input lag.</p>
         </div>
       </section>
 

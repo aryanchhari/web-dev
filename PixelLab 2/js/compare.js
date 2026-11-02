@@ -70,11 +70,11 @@ function updateComparison() {
 
   let title = "Two ways to shape the light.";
   let text =
-    "Both selected LCD types use a backlight. Their liquid-crystal arrangements give them different general traits.";
+    "Both selected LCD types use a backlight. IPS, VA and TN arrange liquid crystals differently, changing contrast and viewing angles.";
   if (first === second) {
     title = "Same type. Same starting point.";
     text =
-      "You've selected the same panel type twice. Try another type to explore a different approach. Real monitors using the same type can still perform differently.";
+      "You've selected the same panel type twice. Try another type to explore a different approach.";
   } else if (first === "3" || second === "3") {
     title = "Light behind. Light within.";
     text =
@@ -83,7 +83,7 @@ function updateComparison() {
   if (angle === "side") {
     text =
       text +
-      " The drawn off-axis fade is exaggerated; it is not a measured viewing angle.";
+      " Off-centre viewing can reduce colour and contrast, especially on TN and VA panels.";
   }
   document.getElementById("insightTitle").innerHTML = title;
   document.getElementById("insightText").innerHTML = text;
@@ -106,4 +106,25 @@ function resetComparison() {
   updateComparison();
 }
 
+// CONTRAST: hold the example white level at 200 and change the black level.
+function updateContrast() {
+  let blackLevel = document.getElementById("blackLevel").value / 100;
+  let ratio = Math.round(200 / blackLevel);
+  let shade = Math.round(blackLevel * 100);
+
+  document.getElementById("blackLevelLabel").innerHTML =
+    blackLevel.toFixed(2) + " cd/m²";
+  document.getElementById("contrastRatio").innerHTML = ratio + ":1";
+  document.getElementById("contrastFormula").innerHTML =
+    "200 ÷ " + blackLevel.toFixed(2) + " = " + ratio + ":1";
+  document.getElementById("contrastScene").style.backgroundColor =
+    "rgb(" + shade + ", " + shade + ", " + shade + ")";
+}
+
+function resetContrast() {
+  document.getElementById("blackLevel").value = 20;
+  updateContrast();
+}
+
 updateComparison();
+updateContrast();
