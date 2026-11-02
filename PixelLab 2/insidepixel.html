@@ -2,39 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Pixel Lab: a hands-on playground for display panels, pixels and motion."
-    />
     <title>Inside a pixel | Pixel Lab</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
     <header class="header">
-      <a class="logo" href="index.html" aria-label="Pixel Lab home"
-        ><span class="logo-mark" aria-hidden="true">▦</span> pixel
-        <span>lab</span><span class="logo-dot">.</span></a
-      >
-      <nav class="nav" aria-label="Main navigation">
+      <a class="logo" href="index.html"><span class="logo-mark">▦</span> pixel
+        <span>lab</span><span class="logo-dot">.</span></a>
+      <nav class="nav">
         <a class="nav-link" href="index.html">Compare lab</a>
-        <a class="nav-link active" href="insidepixel.html" aria-current="page"
-          >Inside a pixel</a
-        >
+        <a class="nav-link active" href="insidepixel.html">Inside a pixel</a>
         <a class="nav-link" href="motion.html">Motion test</a>
         <a class="nav-link" href="challenge.html">Challenge</a>
         <a class="nav-link panel-link" href="findpanel.html">Find my panel</a>
       </nav>
     </header>
 
-    <main class="main" id="main">
-      <noscript
-        ><p class="notice">
-          Enable JavaScript to use the lab controls, challenge and panel finder.
-        </p></noscript
-      >
+    <main class="main">
       <section class="heading">
         <div class="heading-top">
           <p class="eyebrow">LOOK A LITTLE CLOSER</p>
@@ -55,15 +40,12 @@
               id="ipsButton"
               class="button selected"
               type="button"
-              aria-pressed="true"
               onclick="changePixelType('ips')"
             >
-              IPS LCD</button
-            ><button
+              IPS LCD</button><button
               id="oledButton"
               class="button secondary"
               type="button"
-              aria-pressed="false"
               onclick="changePixelType('oled')"
             >
               OLED
@@ -72,8 +54,7 @@
           <div class="control-divider"></div>
           <label for="pixelLevel">02 / PIXEL LIGHT LEVEL</label>
           <div class="range-top">
-            <span>Off</span><strong id="levelLabel">80%</strong
-            ><span>Full</span>
+            <span>Off</span><strong id="levelLabel">80%</strong><span>Full</span>
           </div>
           <input
             id="pixelLevel"
@@ -83,11 +64,7 @@
             value="80"
             oninput="updatePixel()"
           />
-          <button
-            class="button secondary full-width"
-            type="button"
-            onclick="turnPixelOff()"
-          >
+          <button class="button secondary full-width" type="button" onclick="turnPixelOff()">
             Set pixel to black
           </button>
           <p class="note">
@@ -103,16 +80,11 @@
           </div>
           <div class="layer-diagram" id="layerDiagram">
             <div class="backlight-layer" id="backlightLayer">
-              <span>BACKLIGHT</span><strong>ON</strong
-              ><span>light from behind</span>
+              <span>BACKLIGHT</span><strong>ON</strong><span>light from behind</span>
             </div>
-            <span class="layer-arrow" id="layerArrow" aria-hidden="true"
-              >→</span
-            >
+            <span class="layer-arrow" id="layerArrow">→</span>
             <div class="pixel-layer">
-              <span class="small-label" id="layerLabel"
-                >LIQUID CRYSTAL + COLOUR FILTERS</span
-              >
+              <span class="small-label" id="layerLabel">LIQUID CRYSTAL + COLOUR FILTERS</span>
               <div class="subpixels">
                 <div id="redPixel" class="subpixel red-pixel">R</div>
                 <div id="greenPixel" class="subpixel green-pixel">G</div>
@@ -120,15 +92,15 @@
               </div>
               <span class="small-label">ENLARGED SUBPIXELS</span>
             </div>
-            <span class="layer-arrow" aria-hidden="true">→</span>
+            <span class="layer-arrow">→</span>
             <div class="output-layer">
               <span class="small-label">WHAT YOU SEE</span>
               <div id="pixelOutput" class="pixel-output"></div>
               <span class="small-label" id="outputLabel">LIGHT PIXEL</span>
             </div>
           </div>
-          <div class="insight" aria-live="polite">
-            <span class="insight-icon" aria-hidden="true">↗</span>
+          <div class="insight">
+            <span class="insight-icon">↗</span>
             <div>
               <h2 id="pixelTitle">Light through a shutter.</h2>
               <p id="pixelExplanation">
@@ -179,12 +151,7 @@
         <p class="eyebrow">LESS JARGON. MORE CLARITY.</p>
         <h2>A pocket display dictionary.</h2>
         <div class="glossary-row">
-          <button
-            type="button"
-            onclick="toggleTerm(0)"
-            aria-expanded="false"
-            aria-controls="term0"
-          >
+          <button type="button" onclick="toggleTerm(0)">
             Resolution <span id="termIcon0">+</span>
           </button>
           <div class="term-answer" id="term0">
@@ -196,12 +163,7 @@
           </div>
         </div>
         <div class="glossary-row">
-          <button
-            type="button"
-            onclick="toggleTerm(1)"
-            aria-expanded="false"
-            aria-controls="term1"
-          >
+          <button type="button" onclick="toggleTerm(1)">
             Refresh rate <span id="termIcon1">+</span>
           </button>
           <div class="term-answer" id="term1">
@@ -212,12 +174,7 @@
           </div>
         </div>
         <div class="glossary-row">
-          <button
-            type="button"
-            onclick="toggleTerm(2)"
-            aria-expanded="false"
-            aria-controls="term2"
-          >
+          <button type="button" onclick="toggleTerm(2)">
             Pixel response time <span id="termIcon2">+</span>
           </button>
           <div class="term-answer" id="term2">
@@ -229,12 +186,7 @@
           </div>
         </div>
         <div class="glossary-row">
-          <button
-            type="button"
-            onclick="toggleTerm(3)"
-            aria-expanded="false"
-            aria-controls="term3"
-          >
+          <button type="button" onclick="toggleTerm(3)">
             Contrast <span id="termIcon3">+</span>
           </button>
           <div class="term-answer" id="term3">
@@ -259,28 +211,23 @@
             href="https://www.samsung.com/au/monitors/monitor-buying-guide/ip-va-tn-oled/"
             target="_blank"
             rel="noopener noreferrer"
-            >Samsung / Panel technologies ↗</a
-          ><a
+            >Samsung / Panel technologies ↗</a><a
             href="https://www.lg.com/hk_en/lg-experience/helpful-hints/monitor-types-explained/"
             target="_blank"
             rel="noopener noreferrer"
-            >LG / IPS, VA and TN ↗</a
-          ><a
+            >LG / IPS, VA and TN ↗</a><a
             href="https://www.asus.com/blog/oled-vs-mini-led-vs-lcd/"
             target="_blank"
             rel="noopener noreferrer"
-            >ASUS / OLED, Mini LED and LCD ↗</a
-          ><a
+            >ASUS / OLED, Mini LED and LCD ↗</a><a
             href="https://www.corsair.com/us/en/explorer/gamer/monitors/monitor-panel-types-explained-va-tn-ips-oled-qd-oled/"
             target="_blank"
             rel="noopener noreferrer"
-            >Corsair / Panel types explained ↗</a
-          ><a
+            >Corsair / Panel types explained ↗</a><a
             href="https://www.dell.com/en-us/shopping/refresh-rate-monitors"
             target="_blank"
             rel="noopener noreferrer"
-            >Dell / Refresh rate and response time ↗</a
-          >
+            >Dell / Refresh rate and response time ↗</a>
         </div>
       </section>
     </main>

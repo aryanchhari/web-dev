@@ -161,7 +161,6 @@ function nextQuestion() {
   currentQuestion++;
   if (currentQuestion < questions.length) {
     showQuestion();
-    document.getElementById("questionTitle").focus();
   } else {
     showResult();
   }
@@ -186,7 +185,6 @@ function showResult() {
   }
   document.getElementById("resultHeading").innerHTML = heading;
   document.getElementById("resultMessage").innerHTML = message;
-  document.getElementById("resultHeading").focus();
 }
 
 function restartQuiz() {
@@ -195,7 +193,6 @@ function restartQuiz() {
   document.getElementById("questionArea").style.display = "block";
   document.getElementById("quizResult").style.display = "none";
   showQuestion();
-  document.getElementById("questionTitle").focus();
 }
 
 showQuestion();

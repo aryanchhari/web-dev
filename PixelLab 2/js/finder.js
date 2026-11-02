@@ -91,7 +91,6 @@ function findPanel(event) {
   document.getElementById("matchChecks").innerHTML = checks;
   document.getElementById("alternativeName").innerHTML =
     panels[second].name + " — " + panels[second].description;
-  document.getElementById("matchName").focus();
 }
 
 function resetFinder() {

@@ -5,14 +5,18 @@ Plain HTML, CSS and JavaScript. All illustrations are made with CSS.
 
 ## Run it locally
 
-1. Extract PixelLab.zip first.
-2. Open the extracted PixelLab folder.
-3. Double-click index.html to open it in Chrome, Safari, Edge or Firefox.
+1. Pull the latest changes to your web-dev repository.
+2. Open the PixelLab 2 folder.
+3. Double-click index.html to open it in Chrome on your MacBook Neo.
 
 You can also open the folder in VS Code and use Live Server or Live Preview.
 There is no installation, build command, account or server requirement.
-All five pages and interactions work offline. Only the optional manufacturer
-reading links need an internet connection.
+Keep JavaScript enabled for the interactive controls. The manufacturer reading
+links open online.
+
+The header, main area and footer use a fixed width of 1200px for the MacBook
+presentation. There are no phone/tablet layouts, media queries or device-specific
+settings. Use the browser at 100% zoom.
 
 ## Pages
 
@@ -48,20 +52,22 @@ DOM selection, innerHTML, input values, inline event handlers, style updates
 and one setTimeout. It uses no classes, promises, async/await, modules or API calls.
 
 The CSS uses selectors, spacing, borders, colours, gradients, Flexbox, basic
-Grid, positioning, hover transitions, keyframe animation and media queries.
+Grid, positioning, hover transitions and keyframe animation. Colours use names
+such as black and white, or rgb() and rgba() values. The existing colour palette
+is kept, including the transparent shadows and motion trail.
 
 A few small helpers are useful extensions of what you already know:
 
 - element.className replaces an element's CSS class string.
-- element.setAttribute updates an HTML attribute. Here it keeps accessible
-  pressed/expanded button states in sync with the visible controls.
-- element.focus() moves keyboard focus to a new question, result or match.
 - form.reset() restores form controls to their original values.
 - button.disabled prevents another answer or an early next-question click.
 - number.toFixed(2) displays a calculated number with two decimal places.
 - CSS steps(24, end) makes an animation jump between 24 positions per crossing.
 - CSS calc(100% - 46px) keeps the moving target inside its track.
-- prefers-reduced-motion removes decorative transitions for that preference.
+
+The controls use their existing classes, visible labels and show/hide logic.
+There are no noscript messages, aside tags, ARIA attributes, hidden helper text
+or scripted focus changes.
 
 The scripts contain comments at the main steps. Start with compare.js if you
 want to trace how selecting an option changes the page.
@@ -69,7 +75,7 @@ want to trace how selecting an option changes the page.
 ## Change the project
 
 - Edit the text and layout in each HTML file.
-- Change colours, spacing and responsive layouts in style.css.
+- Change colours, spacing and the fixed desktop width in style.css.
 - Edit panel descriptions in js/data.js.
 - Edit questions and answers in the questions array in js/challenge.js.
   Answer indexes start at 0. Keep four choices per question.

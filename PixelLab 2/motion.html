@@ -2,39 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Pixel Lab: a hands-on playground for display panels, pixels and motion."
-    />
     <title>Motion test | Pixel Lab</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
     <header class="header">
-      <a class="logo" href="index.html" aria-label="Pixel Lab home"
-        ><span class="logo-mark" aria-hidden="true">▦</span> pixel
-        <span>lab</span><span class="logo-dot">.</span></a
-      >
-      <nav class="nav" aria-label="Main navigation">
+      <a class="logo" href="index.html"><span class="logo-mark">▦</span> pixel
+        <span>lab</span><span class="logo-dot">.</span></a>
+      <nav class="nav">
         <a class="nav-link" href="index.html">Compare lab</a>
         <a class="nav-link" href="insidepixel.html">Inside a pixel</a>
-        <a class="nav-link active" href="motion.html" aria-current="page"
-          >Motion test</a
-        >
+        <a class="nav-link active" href="motion.html">Motion test</a>
         <a class="nav-link" href="challenge.html">Challenge</a>
         <a class="nav-link panel-link" href="findpanel.html">Find my panel</a>
       </nav>
     </header>
 
-    <main class="main" id="main">
-      <noscript
-        ><p class="notice">
-          Enable JavaScript to use the lab controls, challenge and panel finder.
-        </p></noscript
-      >
+    <main class="main">
       <section class="heading">
         <div class="heading-top">
           <p class="eyebrow">KEEP YOUR EYES ON THE PIXELS</p>
@@ -48,37 +33,21 @@
       </section>
 
       <section class="motion-layout">
-        <aside class="control-card">
+        <div class="control-card">
           <p class="eyebrow">MOTION CONTROLS</p>
           <h2>Find your flow.</h2>
-          <label for="lapTime">Seconds per crossing</label
-          ><input
-            id="lapTime"
-            type="range"
-            min="1"
-            max="6"
-            value="3"
-            oninput="updateMotion()"
-          />
+          <label for="lapTime">Seconds per crossing</label><input id="lapTime" type="range" min="1" max="6" value="3" oninput="updateMotion()" />
           <p class="control-value" id="lapLabel">3 seconds</p>
-          <label for="stepCount">Positions per crossing</label
-          ><select id="stepCount" onchange="updateMotion()">
+          <label for="stepCount">Positions per crossing</label><select id="stepCount" onchange="updateMotion()">
             <option value="8">8 steps / very coarse</option>
             <option value="24" selected>24 steps / coarse</option>
             <option value="60">60 steps / finer</option>
           </select>
-          <label for="trail">Illustrated trail</label
-          ><select id="trail" onchange="updateMotion()">
+          <label for="trail">Illustrated trail</label><select id="trail" onchange="updateMotion()">
             <option value="off">Off</option>
             <option value="on">On</option>
           </select>
-          <button
-            class="button full-width"
-            id="playButton"
-            type="button"
-            onclick="toggleMotion()"
-            aria-pressed="false"
-          >
+          <button class="button full-width" id="playButton" type="button" onclick="toggleMotion()">
             Start motion →
           </button>
           <button class="text-button" type="button" onclick="resetMotion()">
@@ -88,13 +57,11 @@
             Start when you're ready. Both targets cross the same distance in the
             same time.
           </p>
-        </aside>
+        </div>
         <div class="motion-lab">
           <div class="section-top">
             <p class="eyebrow">THE MOTION TRACK</p>
-            <span class="status" id="motionStatus" aria-live="polite"
-              >● Paused</span
-            >
+            <span class="status" id="motionStatus">● Paused</span>
           </div>
           <article class="motion-row">
             <div class="section-top">
@@ -102,11 +69,10 @@
               <span class="tag" id="stepLabel">24 STEPS / CROSSING</span>
             </div>
             <div class="motion-track">
-              <div id="stepRunner" class="runner stepped" aria-hidden="true">
+              <div id="stepRunner" class="runner stepped">
                 <span>+</span>
               </div>
-              <span class="track-marker start-marker">START</span
-              ><span class="track-marker end-marker">END</span>
+              <span class="track-marker start-marker">START</span><span class="track-marker end-marker">END</span>
             </div>
             <p>Fewer positions make the jumps easier to notice.</p>
           </article>
@@ -116,11 +82,10 @@
               <span class="tag">BROWSER PACED</span>
             </div>
             <div class="motion-track">
-              <div id="smoothRunner" class="runner smooth" aria-hidden="true">
+              <div id="smoothRunner" class="runner smooth">
                 <span>+</span>
               </div>
-              <span class="track-marker start-marker">START</span
-              ><span class="track-marker end-marker">END</span>
+              <span class="track-marker start-marker">START</span><span class="track-marker end-marker">END</span>
             </div>
             <p>Your browser and display determine the visible updates.</p>
           </article>
@@ -140,8 +105,7 @@
             At a fixed refresh rate, the interval is 1000 ÷ Hz milliseconds.
             This calculation is separate from pixel response time.
           </p>
-          <label for="refreshRate">Choose a refresh rate</label
-          ><select id="refreshRate" onchange="calculateFrameTime()">
+          <label for="refreshRate">Choose a refresh rate</label><select id="refreshRate" onchange="calculateFrameTime()">
             <option value="60">60 Hz</option>
             <option value="120">120 Hz</option>
             <option value="144" selected>144 Hz</option>
@@ -149,10 +113,8 @@
             <option value="360">360 Hz</option>
           </select>
         </div>
-        <div class="frame-result" aria-live="polite">
-          <span class="small-label">TIME BETWEEN REFRESHES</span
-          ><strong id="frameTime">6.94 <span>ms</span></strong
-          ><span class="muted" id="frameFormula">1000 ÷ 144 Hz</span>
+        <div class="frame-result">
+          <span class="small-label">TIME BETWEEN REFRESHES</span><strong id="frameTime">6.94 <span>ms</span></strong><span class="muted" id="frameFormula">1000 ÷ 144 Hz</span>
           <p>Calculated interval.<br />Not your measured input lag.</p>
         </div>
       </section>

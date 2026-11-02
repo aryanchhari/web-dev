@@ -12,7 +12,9 @@ function updateMotion() {
     runners[i].style.animationDuration = seconds + "s";
     if (trail === "on") {
       runners[i].style.boxShadow =
-        "-12px 0 #b4f56860, -24px 0 #b4f56830, -36px 0 #b4f56815";
+        "-12px 0 rgba(180, 245, 104, 0.38), " +
+        "-24px 0 rgba(180, 245, 104, 0.19), " +
+        "-36px 0 rgba(180, 245, 104, 0.08)";
     } else {
       runners[i].style.boxShadow = "none";
     }
@@ -39,11 +41,9 @@ function showMotionState() {
   }
   if (motionPlaying === true) {
     button.innerHTML = "Pause motion Ⅱ";
-    button.setAttribute("aria-pressed", "true");
     document.getElementById("motionStatus").innerHTML = "● Running";
   } else {
     button.innerHTML = "Start motion →";
-    button.setAttribute("aria-pressed", "false");
     document.getElementById("motionStatus").innerHTML = "● Paused";
   }
 }

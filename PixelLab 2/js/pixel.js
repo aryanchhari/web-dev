@@ -8,15 +8,11 @@ function changePixelType(type) {
 
   ipsButton.className = "button secondary";
   oledButton.className = "button secondary";
-  ipsButton.setAttribute("aria-pressed", "false");
-  oledButton.setAttribute("aria-pressed", "false");
 
   if (type === "ips") {
     ipsButton.className = "button selected";
-    ipsButton.setAttribute("aria-pressed", "true");
   } else {
     oledButton.className = "button selected";
-    oledButton.setAttribute("aria-pressed", "true");
   }
   updatePixel();
 }
@@ -40,7 +36,7 @@ function updatePixel() {
     document.getElementById("layerArrow").style.display = "inline";
     document.getElementById("layerLabel").innerHTML =
       "LIQUID CRYSTAL + COLOUR FILTERS";
-    document.querySelector(".subpixels").style.backgroundColor = "#252a22";
+    document.querySelector(".subpixels").style.backgroundColor = "rgb(37, 42, 34)";
     // A small grey floor illustrates leakage in a conventional LCD.
     shade = 28 + level * 2.27;
     if (level === 0) {
@@ -53,7 +49,7 @@ function updatePixel() {
     document.getElementById("backlightLayer").style.display = "none";
     document.getElementById("layerArrow").style.display = "none";
     document.getElementById("layerLabel").innerHTML = "SELF-EMISSIVE SUBPIXELS";
-    document.querySelector(".subpixels").style.backgroundColor = "#000000";
+    document.querySelector(".subpixels").style.backgroundColor = "black";
     title = "The pixel is the light source.";
     explanation =
       "OLED emits light at the pixel. It does not need a separate backlight behind the image.";
@@ -80,15 +76,12 @@ function turnPixelOff() {
 
 function toggleTerm(number) {
   let answer = document.getElementById("term" + number);
-  let button = document.querySelectorAll(".glossary-row button")[number];
   if (answer.style.display === "block") {
     answer.style.display = "none";
     document.getElementById("termIcon" + number).innerHTML = "+";
-    button.setAttribute("aria-expanded", "false");
   } else {
     answer.style.display = "block";
     document.getElementById("termIcon" + number).innerHTML = "−";
-    button.setAttribute("aria-expanded", "true");
   }
 }
 

@@ -10,8 +10,8 @@ let panels = [
     angles: "Usually wide viewing angles",
     use: "Work, creative tasks and mixed use",
     caution: "Check dark-room contrast and actual response measurements",
-    dark: "#252821",
-    bright: "#34372f",
+    dark: "rgb(37, 40, 33)",
+    bright: "rgb(52, 55, 47)",
     sideOpacity: 0.9,
     reason:
       "IPS is a balanced starting point for a screen used for work, mixed tasks or different viewing positions.",
@@ -30,8 +30,8 @@ let panels = [
     angles: "Colour and contrast can shift off centre",
     use: "Movies and contrast-focused mixed use",
     caution: "Some models show slow dark transitions; check the model",
-    dark: "#131710",
-    bright: "#2d3228",
+    dark: "rgb(19, 23, 16)",
+    bright: "rgb(45, 50, 40)",
     sideOpacity: 0.67,
     reason:
       "VA is worth exploring when stronger LCD contrast matters. It also suits a preference for an LCD with long static sessions.",
@@ -50,8 +50,8 @@ let panels = [
     angles: "More noticeable off-axis image shifts",
     use: "Dedicated esports setups; model choice matters",
     caution: "Viewing angles and image quality involve compromises",
-    dark: "#292a24",
-    bright: "#393b32",
+    dark: "rgb(41, 42, 36)",
+    bright: "rgb(57, 59, 50)",
     sideOpacity: 0.42,
     reason:
       "TN can be a specialist choice when dedicated esports performance takes priority over viewing angles.",
@@ -70,8 +70,8 @@ let panels = [
     angles: "Usually wide viewing angles",
     use: "Dark scenes, entertainment and fast pixel transitions",
     caution: "Repeated static content can contribute to burn-in",
-    dark: "#000000",
-    bright: "#1a1e17",
+    dark: "black",
+    bright: "rgb(26, 30, 23)",
     sideOpacity: 0.96,
     reason:
       "OLED is worth exploring for deep blacks and fast pixel transitions, especially with moving content and darker-room use.",

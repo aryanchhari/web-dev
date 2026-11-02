@@ -2,26 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Pixel Lab: a hands-on playground for display panels, pixels and motion."
-    />
     <title>Compare lab | Pixel Lab</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main">Skip to content</a>
     <header class="header">
-      <a class="logo" href="index.html" aria-label="Pixel Lab home"
-        ><span class="logo-mark" aria-hidden="true">▦</span> pixel
-        <span>lab</span><span class="logo-dot">.</span></a
-      >
-      <nav class="nav" aria-label="Main navigation">
-        <a class="nav-link active" href="index.html" aria-current="page"
-          >Compare lab</a
-        >
+      <a class="logo" href="index.html"><span class="logo-mark">▦</span> pixel
+        <span>lab</span><span class="logo-dot">.</span></a>
+      <nav class="nav">
+        <a class="nav-link active" href="index.html">Compare lab</a>
         <a class="nav-link" href="insidepixel.html">Inside a pixel</a>
         <a class="nav-link" href="motion.html">Motion test</a>
         <a class="nav-link" href="challenge.html">Challenge</a>
@@ -29,12 +19,7 @@
       </nav>
     </header>
 
-    <main class="main" id="main">
-      <noscript
-        ><p class="notice">
-          Enable JavaScript to use the lab controls, challenge and panel finder.
-        </p></noscript
-      >
+    <main class="main">
       <section class="heading">
         <div class="heading-top">
           <p class="eyebrow">THE DISPLAY PLAYGROUND</p>
@@ -47,8 +32,8 @@
         </p>
       </section>
 
-      <section class="comparison" aria-label="Interactive panel comparison">
-        <aside class="control-card">
+      <section class="comparison">
+        <div class="control-card">
           <p class="eyebrow">YOUR EXPERIMENT</p>
           <h2>Set the scene.</h2>
           <label for="panelA">Display A</label>
@@ -65,11 +50,7 @@
             <option value="2">TN LCD</option>
             <option value="3" selected>OLED</option>
           </select>
-          <button
-            class="button secondary full-width"
-            type="button"
-            onclick="swapPanels()"
-          >
+          <button class="button secondary full-width" type="button" onclick="swapPanels()">
             ⇄ Swap displays
           </button>
           <div class="control-divider"></div>
@@ -93,7 +74,7 @@
           <button class="text-button" type="button" onclick="resetComparison()">
             Reset experiment ↺
           </button>
-        </aside>
+        </div>
 
         <div class="experiment">
           <div class="section-top">
@@ -107,11 +88,7 @@
                 <span class="tag">DISPLAY A</span>
               </div>
               <div class="screen" id="screenA">
-                <div
-                  class="pattern-art spectrum"
-                  id="patternA"
-                  aria-hidden="true"
-                >
+                <div class="pattern-art spectrum" id="patternA">
                   <div class="orb"></div>
                   <div class="city"></div>
                 </div>
@@ -119,7 +96,7 @@
                   <span>BLACK LEVEL</span><span>↓</span>
                 </div>
               </div>
-              <div class="monitor-base" aria-hidden="true"></div>
+              <div class="monitor-base"></div>
               <p id="descriptionA">
                 Wide viewing angles. Everyday versatility.
               </p>
@@ -131,11 +108,7 @@
                 <span class="tag">DISPLAY B</span>
               </div>
               <div class="screen" id="screenB">
-                <div
-                  class="pattern-art spectrum"
-                  id="patternB"
-                  aria-hidden="true"
-                >
+                <div class="pattern-art spectrum" id="patternB">
                   <div class="orb"></div>
                   <div class="city"></div>
                 </div>
@@ -143,7 +116,7 @@
                   <span>BLACK LEVEL</span><span>↓</span>
                 </div>
               </div>
-              <div class="monitor-base" aria-hidden="true"></div>
+              <div class="monitor-base"></div>
               <p id="descriptionB">Each pixel makes its own light.</p>
               <span class="small-label" id="lightB">SELF-EMISSIVE</span>
             </article>
@@ -153,8 +126,8 @@
             and room effects are exaggerated to explain the idea. Your own
             screen limits what you can see.
           </p>
-          <div class="insight" aria-live="polite">
-            <span class="insight-icon" aria-hidden="true">↗</span>
+          <div class="insight">
+            <span class="insight-icon">↗</span>
             <div>
               <h3 id="insightTitle">Light behind. Light within.</h3>
               <p id="insightText">
@@ -173,21 +146,16 @@
           </div>
           <span class="muted">General traits · Models vary</span>
         </div>
-        <div class="table-wrap">
-          <table>
-            <caption class="visually-hidden">
-              Characteristics of your selected display panels
-            </caption>
-            <thead>
-              <tr>
-                <th scope="col">What matters</th>
-                <th scope="col" id="tableA">IPS LCD</th>
-                <th scope="col" id="tableB">OLED</th>
-              </tr>
-            </thead>
-            <tbody id="comparisonRows"></tbody>
-          </table>
-        </div>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">What matters</th>
+              <th scope="col" id="tableA">IPS LCD</th>
+              <th scope="col" id="tableB">OLED</th>
+            </tr>
+          </thead>
+          <tbody id="comparisonRows"></tbody>
+        </table>
         <p class="note">
           LCD examples here assume a conventional backlight. Local dimming and
           Mini LED can change dark-scene performance. Panel type alone does not
@@ -195,22 +163,16 @@
         </p>
       </section>
 
-      <section class="next-grid" aria-label="Explore the other labs">
-        <a class="next-card" href="insidepixel.html"
-          ><span class="eyebrow">02 / LOOK CLOSER</span>
+      <section class="next-grid">
+        <a class="next-card" href="insidepixel.html"><span class="eyebrow">02 / LOOK CLOSER</span>
           <h3>Inside a pixel <span>↗</span></h3>
-          <p>Where does the light come from?</p></a
-        >
-        <a class="next-card" href="motion.html"
-          ><span class="eyebrow">03 / KEEP MOVING</span>
+          <p>Where does the light come from?</p></a>
+        <a class="next-card" href="motion.html"><span class="eyebrow">03 / KEEP MOVING</span>
           <h3>Motion test <span>↗</span></h3>
-          <p>See the space between frames.</p></a
-        >
-        <a class="next-card" href="challenge.html"
-          ><span class="eyebrow">04 / YOUR TURN</span>
+          <p>See the space between frames.</p></a>
+        <a class="next-card" href="challenge.html"><span class="eyebrow">04 / YOUR TURN</span>
           <h3>Take the challenge <span>↗</span></h3>
-          <p>Eight questions. A sharper eye.</p></a
-        >
+          <p>Eight questions. A sharper eye.</p></a>
       </section>
     </main>
 
