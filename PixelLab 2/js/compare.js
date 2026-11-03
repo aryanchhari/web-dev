@@ -1,5 +1,3 @@
-// COMPARE LAB: read select values, look up an object, update the page.
-
 function updateScreen(letter, panel, pattern, room, angle) {
   document.getElementById("name" + letter).innerHTML = panel.name;
   document.getElementById("description" + letter).innerHTML = panel.description;
@@ -106,7 +104,6 @@ function resetComparison() {
   updateComparison();
 }
 
-// CONTRAST: hold the example white level at 200 and change the black level.
 function updateContrast() {
   let blackLevel = document.getElementById("blackLevel").value / 100;
   let ratio = Math.round(200 / blackLevel);

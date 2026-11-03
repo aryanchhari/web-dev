@@ -1,5 +1,3 @@
-// Shared panel information: an array of objects, like your Day 3 and Day 9 work.
-// These are broad educational descriptions, not scores for actual monitors.
 let panels = [
   {
     name: "IPS LCD",

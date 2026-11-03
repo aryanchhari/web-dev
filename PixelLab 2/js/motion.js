@@ -1,5 +1,3 @@
-// MOTION: the browser runs a CSS keyframe animation.
-// JavaScript changes its settings. No fake Hz or latency measurements.
 let motionPlaying = false;
 
 function updateMotion() {
@@ -66,8 +64,6 @@ function resetMotion() {
   updateMotion();
   showMotionState();
   calculateFrameTime();
-  // Reset the CSS animation's progress as well as its controls.
-  // Changing animation-name briefly restarts the keyframes.
   let runners = document.querySelectorAll(".runner");
   for (let i = 0; i < runners.length; i++) {
     runners[i].style.animationName = "none";
@@ -82,7 +78,6 @@ function resetMotion() {
 function calculateFrameTime() {
   let refreshRate = document.getElementById("refreshRate").value;
   let milliseconds = 1000 / refreshRate;
-  // toFixed(2) formats a number with two digits after the decimal point.
   document.getElementById("frameTime").innerHTML =
     milliseconds.toFixed(2) + " <span>ms</span>";
   document.getElementById("frameFormula").innerHTML =

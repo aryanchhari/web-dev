@@ -1,4 +1,3 @@
-// CHALLENGE: question data in an array, plus simple score and position variables.
 let questions = [
   {
     question: "Which display can turn individual pixels off to show black?",
@@ -125,7 +124,6 @@ function showQuestion() {
 }
 
 function chooseAnswer(choice) {
-  // Once answered, repeated clicks cannot add more points.
   if (answered === true) {
     return;
   }

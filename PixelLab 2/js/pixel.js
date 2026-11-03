@@ -1,4 +1,3 @@
-// INSIDE A PIXEL: conditions + range input + style changes.
 let pixelType = "ips";
 
 function changePixelType(type) {
@@ -18,7 +17,6 @@ function changePixelType(type) {
 }
 
 function updatePixel() {
-  // Multiplication converts the range input's string value to a number.
   let level = document.getElementById("pixelLevel").value * 1;
   document.getElementById("levelLabel").innerHTML = level + "%";
   let opacity = level / 100;
@@ -37,7 +35,6 @@ function updatePixel() {
     document.getElementById("layerLabel").innerHTML =
       "LIQUID CRYSTAL + COLOUR FILTERS";
     document.querySelector(".subpixels").style.backgroundColor = "rgb(37, 42, 34)";
-    // A small grey floor illustrates leakage in a conventional LCD.
     shade = 28 + level * 2.27;
     if (level === 0) {
       title = "Black pixel. Backlight still on.";

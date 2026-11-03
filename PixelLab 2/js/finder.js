@@ -1,5 +1,3 @@
-// PANEL FINDER: four inputs, a small points system, and a loop to find the top result.
-// Array positions match data.js: 0 = IPS, 1 = VA, 2 = TN, 3 = OLED.
 function findPanel(event) {
   event.preventDefault();
   let use = document.getElementById("mainUse").value;
