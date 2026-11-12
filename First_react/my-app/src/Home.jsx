@@ -1,6 +1,6 @@
-import './home.css'
+import './Home.css'
 
-function home(){
+function Home(){
 
 return (
     <>
@@ -9,4 +9,4 @@ return (
 )
 
 }
-export default home;
+export default Home;

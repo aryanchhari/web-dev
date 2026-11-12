@@ -1,6 +1,6 @@
-import './product.css'
+import './Product.css'
 
-function product(){
+function Product(){
 
 return (
     <>
@@ -9,4 +9,4 @@ return (
 )
 
 }
-export default product;
+export default Product;

@@ -1,6 +1,7 @@
 import Navbar from "./Components/Navbar";
-import Product from "./Src/Product";
-import Home from "./Src/Home";
+import Product from "./Product.jsx"
+import Home from "./Home,jsx";
+import Contact from "./Pages/Contact";
 
 function App(){
 
