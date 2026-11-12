@@ -1,12 +1,14 @@
 import Navbar from "./Components/Navbar";
-import product from "./product";
+import Product from "./Src/Product";
+import Home from "./Src/Home";
 
 function App(){
 
 return (
   <>
    <Navbar />
-   <product/>
+   <Product />
+   <Home />
 </>
  )
 
