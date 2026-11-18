@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar(){
@@ -8,28 +9,25 @@ return (
   <nav className="HI">
     <ul>  
       <li>
-        <Navilink to="/">Home</Navilink>
+        <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <Navilink to="/about">About</Navilink>
+        <NavLink to="/about">About</NavLink>
       </li>
       <li>
-        <Navilink to="/contact">Contact</Navilink>
+        <NavLink to="/contact">Contact</NavLink>
       </li>
       <li>
-        <Navilink to="/product">Product</Navilink>
+        <NavLink to="/product">Product</NavLink>
       </li>
       <li>
-        <Navilink to="/login">Login</Navilink>
+        <NavLink to="/login">Login</NavLink>
       </li>
       <li>
-        <Navilink to="/register">Register</Navilink>
+        <NavLink to="/register">Register</NavLink>
       </li>
       <li>
-        <Navilink to="/cart">Cart</Navilink>
-      </li>
-      <li>
-        <Navilink to="/Cart">Cart</Navilink>
+        <NavLink to="/cart">Cart</NavLink>
       </li>
     </ul>
   </nav>
