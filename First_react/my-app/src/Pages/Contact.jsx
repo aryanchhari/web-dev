@@ -1,12 +1,15 @@
-import './Contact.css'
+
 
 function Contact(){
 
+  
 return (
-    <>
-    <p>This is a Contact page</p>
-    </>
-)
+<>
+  <div>
+     <h1>Contact Page</h1>
+   </div>
 
+</>
+)
 }
 export default Contact;
