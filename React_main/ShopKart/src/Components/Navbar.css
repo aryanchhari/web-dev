@@ -1,0 +1,33 @@
+.Nav{
+    height: 5%;
+    background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    padding: 10px;
+
+}
+
+.ico{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 10px;
+    border: 1px solid white;
+    background: linear-gradient(to right, #6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 10px;
+    padding: 1px 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    
+
+}
+
+.tagline{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+    padding-left: 10px;
+}
