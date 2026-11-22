@@ -1,35 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap");
 
-:root {
-  font-family: 'DM Sans', sans-serif;
-  color: #142d29;
-  background: #f9faf7;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  --pine: #073a35;
-  --ink: #142d29;
-  --lime: #d2f665;
-  --ease: cubic-bezier(.22, 1, .36, 1);
+/* These rules apply to the whole website. */
+* {
+  box-sizing: border-box;
 }
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 24px; }
-body { margin: 0; min-width: 280px; }
-button, input, a { -webkit-tap-highlight-color: transparent; }
-button, input { font: inherit; }
-button, a { touch-action: manipulation; }
-button { color: inherit; cursor: pointer; }
-a { color: inherit; text-decoration: none; }
-button { border: 0; }
-button:disabled { cursor: default; }
-button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid #128c77; outline-offset: 5px; }
-::selection { background: #d2f665; color: #073a35; }
-img { max-width: 100%; display: block; }
-svg { flex-shrink: 0; }
+html {
+  scroll-behavior: smooth;
+}
 
+body {
+  margin: 0;
+  min-width: 280px;
+  font-family: "DM Sans", sans-serif;
+  background-color: #f9faf7;
+  color: #142d29;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #128c77;
+  outline-offset: 4px;
+}
+
+::selection {
+  color: #073a35;
+  background-color: #d2f665;
+}
+
+/* Turn off movement when the visitor has reduced motion enabled. */
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
 }

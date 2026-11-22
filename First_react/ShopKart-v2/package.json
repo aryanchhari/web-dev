@@ -9,9 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "motion": "^12.23.24",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "bootstrap": "^5.3.9",
+    "react-router-dom": "^7.18.6"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^5.1.1",
