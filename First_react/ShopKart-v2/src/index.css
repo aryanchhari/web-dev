@@ -1,59 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap");
-
-/* These rules apply to the whole website. */
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
+/* This class is added to the body in index.html. */
+.site-body {
   margin: 0;
-  min-width: 280px;
   font-family: "DM Sans", sans-serif;
   background-color: #f9faf7;
   color: #142d29;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button,
-input {
-  font-family: inherit;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-a:focus-visible,
-button:focus-visible,
-input:focus-visible {
-  outline: 3px solid #128c77;
-  outline-offset: 4px;
-}
-
-::selection {
-  color: #073a35;
-  background-color: #d2f665;
-}
-
-/* Turn off movement when the visitor has reduced motion enabled. */
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation: none !important;
-    transition: none !important;
-  }
 }

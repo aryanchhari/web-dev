@@ -18,10 +18,10 @@ function Navbar(props) {
       </div>
 
       {/* Bootstrap Navbar */}
-      <nav className="navbar navbar-expand-xl" aria-label="Main navigation">
-        <div className="container-fluid">
+      <nav className="navbar navbar-expand-xl site-navbar" aria-label="Main navigation">
+        <div className="container-fluid navbar-content">
           {/* Logo */}
-          <NavLink className="navbar-brand" to="/" aria-label="ShopKart home">
+          <NavLink className="navbar-brand brand-link" to="/" aria-label="ShopKart home">
             <img src="/favicon.svg" alt="" className="brand-icon" />
             <span>Shop<span className="brand-accent">Kart</span></span>
           </NavLink>
@@ -29,42 +29,42 @@ function Navbar(props) {
           {/* Bootstrap Category Dropdown */}
           <div className="dropdown category-dropdown">
             <button
-              className="category-btn dropdown-toggle"
+              className="category-btn"
               type="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
               aria-controls="categoryMenu"
               aria-label="All Categories"
             >
-              <img src="/icons/category-grid.svg" alt="" />
+              <img className="category-icon" src="/icons/category-grid.svg" alt="" />
               <span className="category-label">All Categories</span>
             </button>
 
-            <ul className="dropdown-menu dropdown-menu-end" id="categoryMenu">
+            <ul className="dropdown-menu dropdown-menu-end category-menu" id="categoryMenu">
               <li>
-                <a className="dropdown-item" href="/#electronics">Electronics</a>
+                <a className="dropdown-item category-menu-link" href="/#electronics">Electronics</a>
               </li>
               <li>
-                <a className="dropdown-item" href="/#fashion">Fashion</a>
+                <a className="dropdown-item category-menu-link" href="/#fashion">Fashion</a>
               </li>
               <li>
-                <a className="dropdown-item" href="/#home-kitchen">Home & Kitchen</a>
+                <a className="dropdown-item category-menu-link" href="/#home-kitchen">Home & Kitchen</a>
               </li>
               <li>
-                <a className="dropdown-item" href="/#beauty">Beauty & Personal Care</a>
+                <a className="dropdown-item category-menu-link" href="/#beauty">Beauty & Personal Care</a>
               </li>
               <li>
-                <a className="dropdown-item" href="/#sports">Sports & Fitness</a>
+                <a className="dropdown-item category-menu-link" href="/#sports">Sports & Fitness</a>
               </li>
               <li>
-                <a className="dropdown-item" href="/#books">Books & Stationery</a>
+                <a className="dropdown-item category-menu-link" href="/#books">Books & Stationery</a>
               </li>
             </ul>
           </div>
 
           {/* Bootstrap opens and closes this menu on smaller screens. */}
           <button
-            className="navbar-toggler"
+            className="navbar-toggler menu-toggle"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#shopKartNavbar"
@@ -75,23 +75,23 @@ function Navbar(props) {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          <div className="collapse navbar-collapse" id="shopKartNavbar">
+          <div className="collapse navbar-collapse menu-content" id="shopKartNavbar">
             {/* NavLink works like an anchor, without reloading the page. */}
             <ul className="navbar-nav main-nav">
               <li className="nav-item">
-                <NavLink className="nav-link" to="/">Home</NavLink>
+                <NavLink className="nav-link menu-link" to="/">Home</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/products">Products</NavLink>
+                <NavLink className="nav-link menu-link" to="/products">Products</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/deals">Deals</NavLink>
+                <NavLink className="nav-link menu-link" to="/deals">Deals</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/about">About Us</NavLink>
+                <NavLink className="nav-link menu-link" to="/about">About Us</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/contact">Contact</NavLink>
+                <NavLink className="nav-link menu-link" to="/contact">Contact</NavLink>
               </li>
             </ul>
 
@@ -101,6 +101,7 @@ function Navbar(props) {
                 Search for products
               </label>
               <input
+                className="search-input"
                 id="product-search"
                 type="search"
                 placeholder="Search for products..."
@@ -108,24 +109,24 @@ function Navbar(props) {
                 onChange={(event) => props.setSearch(event.target.value)}
               />
               <button className="search-btn" type="submit" aria-label="Search">
-                <img src="/icons/search-icon.png" alt="" />
+                <img className="search-icon" src="/icons/search-icon.png" alt="" />
               </button>
             </form>
 
             {/* Bootstrap handles the wishlist button's active state. */}
             <div className="nav-actions">
               <button
-                className="nav-icon-button wishlist-button"
+                className="btn btn-outline-danger nav-icon-button"
                 type="button"
                 data-bs-toggle="button"
                 aria-pressed="false"
                 aria-label="Wishlist"
               >
-                <img src="/icons/heart.png" alt="" />
+                <img className="nav-icon" src="/icons/heart.png" alt="" />
               </button>
 
-              <NavLink className="nav-icon-button cart-wrapper" to="/cart" aria-label="Cart, 3 items">
-                <img src="/icons/cart-icon.png" alt="" />
+              <NavLink className="nav-icon-button" to="/cart" aria-label="Cart, 3 items">
+                <img className="nav-icon" src="/icons/cart-icon.png" alt="" />
                 <span className="cart-count">3</span>
               </NavLink>
             </div>
