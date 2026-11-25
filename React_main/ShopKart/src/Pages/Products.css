@@ -1,24 +1,146 @@
-
+/* Products Banner */
 .products-banner {
-  width: calc(100% - 32px);
-  height: 180px;
-  margin: 20px 16px 0;
-
-
+  min-height: 180px;
+  margin: 20px 24px;
+  padding: 30px 60px;
+  border-radius: 12px;
+  background-color: #edf3f3;
   background-image: url("/images/product-banner-responsive.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-
-  border-radius: 20px;
-
-
   display: flex;
   align-items: center;
+}
 
+.product-banner-title {
+  color: #102b43;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
 
-  padding: 0 60px;
-  box-sizing: border-box;
+.product-banner-highlight {
+  color: #00a59d;
+}
+
+.product-banner-text {
+  color: #627987;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.product-banner-line {
+  background-color: #00a59d;
+  width: 25px;
+  height: 2px;
+}
+
+/* Main Product Layout */
+.products-layout {
+  padding: 16px 24px 30px;
+  min-height: 550px;
+}
+
+.product-filters {
+  width: 240px;
+  border: 1px solid #d6dadd;
+  border-radius: 10px;
+  background-color: white;
+  color: #142d4b;
   overflow: hidden;
+}
+
+.filter-heading {
+  padding: 16px 18px 8px;
+}
+
+.filter-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.clear-filters {
+  border: none;
+  background-color: transparent;
+  color: #009e98;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0;
+  cursor: pointer;
+}
+
+.clear-filters:hover {
+  color: #007d78;
+}
+
+.filter-section {
+  padding: 14px 18px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.filter-subtitle {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  accent-color: #009e98;
+}
+
+.filter-range {
+  width: 100%;
+  accent-color: #009e98;
+  cursor: pointer;
+}
+
+.filter-price {
+  margin-top: 8px;
+  font-size: 11px;
+}
+
+.filter-stars {
+  color: #e5a51b;
+  font-size: 16px;
+  letter-spacing: 0;
+}
+
+.filter-empty-star {
+  color: #52647a;
+}
+
+.product-count {
+  color: #526170;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .products-banner {
+    margin: 12px;
+    padding: 24px;
+    min-height: 160px;
+    background-image: none;
+  }
+
+  .product-banner-title {
+    font-size: 28px;
+  }
+
+  .products-layout {
+    padding: 12px;
+  }
+
+  .product-filters {
+    width: 100%;
+  }
 }

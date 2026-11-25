@@ -1,5 +1,3 @@
-import React from "react";
-import Navbar from "../components/Navbar";
 import "./Home.css";
 
 function Home() {
@@ -21,11 +19,11 @@ function Home() {
           {/* Hero Benefits */}
           <div className="hero-benefits">
             <div className="benefit-item">
-              <img src="/icons/secure.png" />  <p>100% Secure Payments</p> </div>
+              <img src="/icons/secure.png" alt="" />  <p>100% Secure Payments</p> </div>
             <div className="benefit-item">
-              <img src="/icons/clock.png" /> <p>7 Days Easy Returns</p> </div>
+              <img src="/icons/clock.png" alt="" /> <p>7 Days Easy Returns</p> </div>
             <div className="benefit-item">
-              <img src="/icons/express-delivery.png" /> <p>Fast & Free Delivery</p> </div>
+              <img src="/icons/express-delivery.png" alt="" /> <p>Fast & Free Delivery</p> </div>
           </div>
         </div>
       </section>
