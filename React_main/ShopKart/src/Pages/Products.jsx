@@ -32,7 +32,7 @@ function Products() {
                 <h3 className="filter-subtitle">Categories</h3>
                 <label className="filter-option"><input type="checkbox" /> Electronics</label>
                 <label className="filter-option"><input type="checkbox" /> Fashion</label>
-                <label className="filter-option"><input type="checkbox" /> Home &amp; Kitchen</label>
+                <label className="filter-option"><input type="checkbox" /> Home & Kitchen</label>
                 <label className="filter-option"><input type="checkbox" /> Beauty</label>
                 <label className="filter-option"><input type="checkbox" /> Sports</label>
                 <label className="filter-option"><input type="checkbox" /> Books</label>
@@ -51,15 +51,15 @@ function Products() {
                 <h3 className="filter-subtitle">Ratings</h3>
                 <label className="filter-option">
                   <input type="checkbox" />
-                  <span className="filter-stars">★★★★★</span> &amp; above
+                  <span className="filter-stars">★★★★★</span> & above
                 </label>
                 <label className="filter-option">
                   <input type="checkbox" />
-                  <span className="filter-stars">★★★★<span className="filter-empty-star">☆</span></span> &amp; above
+                  <span className="filter-stars">★★★★<span className="filter-empty-star">☆</span></span> & above
                 </label>
                 <label className="filter-option">
                   <input type="checkbox" />
-                  <span className="filter-stars">★★★<span className="filter-empty-star">☆☆</span></span> &amp; above
+                  <span className="filter-stars">★★★<span className="filter-empty-star">☆☆</span></span> & above
                 </label>
               </div>
 
