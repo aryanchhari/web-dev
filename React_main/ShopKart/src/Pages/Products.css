@@ -49,6 +49,8 @@
   background-color: white;
   color: #193c68;
   overflow: hidden;
+  border: 1px solid rgb(13, 198, 222);
+  
 }
 
 .filter-heading {
