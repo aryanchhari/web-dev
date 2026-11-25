@@ -21,7 +21,7 @@ function Products() {
         <div className="row g-3">
 
           {/* Filters */}
-          <div className="col-12 col-md-auto">
+          <aside className="col-12 col-md-auto">
             <form className="product-filters">
               <div className="filter-heading d-flex justify-content-between align-items-center">
                 <h2 className="filter-title">FILTERS</h2>
@@ -69,7 +69,7 @@ function Products() {
                 <label className="filter-option"><input type="checkbox" /> Out of Stock</label>
               </div>
             </form>
-          </div>
+          </aside>
 
           {/* Product Area */}
           <div className="col">
