@@ -1,3 +1,4 @@
+import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
@@ -14,9 +15,9 @@ function Navbar() {
       <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
           {/* Logo */}
-          <a className="navbar-brand" href="/">
+          <Link className="navbar-brand" to="/">
             <img src="/images/logo.png" alt="ShopKart" className="shopkart-logo"/>
-          </a>
+          </Link>
                    <div className="dropdown category-dropdown">
             <button className="category-btn dropdown-toggle" type="button" 
             data-bs-toggle="dropdown" aria-expanded="false">  All Categories </button>
@@ -40,10 +41,10 @@ function Navbar() {
           <div className="collapse navbar-collapse" id="shopKartNavbar">
             <ul className="navbar-nav main-nav">
               <li className="nav-item">
-                <a className="nav-link active" href="/">Home</a>
+                <NavLink className="nav-link" to="/" end>Home</NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/products">Products</a>
+                <NavLink className="nav-link" to="/products">Products</NavLink>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">Deals</a>

@@ -44,12 +44,11 @@
 
 .product-filters {
   width: 240px;
-  border: 1px solid white;
   border-radius: 10px;
   background-color: white;
-  color: #193c68;
+  color: #142d4b;
   overflow: hidden;
-  border: 1px solid rgb(13, 198, 222);
+  border: 1px solid #dce1e4;
   
 }
 
@@ -80,6 +79,10 @@
 .filter-section {
   padding: 14px 18px;
   border-bottom: 1px solid #e5e7eb;
+}
+
+.filter-categories {
+  min-height: 340px;
 }
 
 .filter-subtitle {
@@ -193,7 +196,7 @@
   font-size: 15px;
   font-weight: 600;
   margin-bottom: 6px;
-  min-height: 36px;
+  min-height: 20px;
 }
 
 .product-rating {
@@ -253,5 +256,9 @@
 @media (max-width: 767px) {
   .product-filters {
     width: 100%;
+  }
+
+  .filter-categories {
+    min-height: 0;
   }
 }

@@ -52,6 +52,7 @@
 
 
 .shop-btn {
+  text-decoration: none;
   background-color: #0ab3a6;
   color: white;
   border: none;
@@ -68,6 +69,7 @@
 
 
 .deal-btn {
+  text-decoration: none;
   background-color: transparent;
   color: white;
   border: 1px solid #0ab3a6;

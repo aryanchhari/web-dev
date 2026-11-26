@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Home.css";
 
 function Home() {
@@ -13,8 +14,8 @@ function Home() {
           <p> Everything you need, <br /> delivered to your door. </p>
 
           <div className="hero-buttons">
-            <button className="shop-btn">Shop Now →</button>
-                        <button className="deal-btn">Explore Deals</button>
+            <Link className="shop-btn" to="/products">Shop Now →</Link>
+                        <Link className="deal-btn" to="/products">Explore Deals</Link>
           </div>
           {/* Hero Benefits */}
           <div className="hero-benefits">
@@ -33,7 +34,7 @@ function Home() {
   <div className="section-heading">
     <h2>Shop by Category</h2>
 
-    <a href="#">View All Categories →</a>
+    <Link to="/products">View All Categories →</Link>
   </div>
 
 
