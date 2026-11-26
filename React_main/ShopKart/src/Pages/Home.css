@@ -277,7 +277,7 @@
     bottom: -12px;
 
 
-    background-image: url("/images/hero-banner.png");
+    background-image: url("/images/hero-banner-3.png");
 
 
     background-size: cover;
@@ -723,3 +723,8 @@
 
 
 
+
+/* Category links */
+.category-card {
+  text-decoration: none;
+}

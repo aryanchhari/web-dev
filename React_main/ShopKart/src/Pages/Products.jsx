@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import './Products.css';
 
 // Sample product data (one object for each image)
@@ -247,28 +248,38 @@ const products = [
 
 const categories = ["Electronics", "Fashion", "Home & Kitchen", "Beauty", "Sports", "Books", "Toys"];
 
-function Products() {
-  const [selectedCategories, setSelectedCategories] = useState([]);
+function Products({ deals = false }) {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const selectedCategories = searchParams.getAll('category');
+  const search = searchParams.get('search') || '';
   const [maxPrice, setMaxPrice] = useState(20000);
   const [rating, setRating] = useState(0);
   const [stock, setStock] = useState("all");
 
   function changeCategory(category) {
+    let nextCategories;
     if (selectedCategories.includes(category)) {
-      setSelectedCategories(selectedCategories.filter((item) => item !== category));
+      nextCategories = selectedCategories.filter((item) => item !== category);
     } else {
-      setSelectedCategories([...selectedCategories, category]);
+      nextCategories = [...selectedCategories, category];
     }
+
+    const nextParams = new URLSearchParams(searchParams);
+    nextParams.delete('category');
+    nextCategories.forEach((item) => nextParams.append('category', item));
+    setSearchParams(nextParams);
   }
 
   function clearFilters() {
-    setSelectedCategories([]);
+    setSearchParams({});
     setMaxPrice(20000);
     setRating(0);
     setStock("all");
   }
 
   const filteredProducts = products.filter((product) => {
+    if (deals && product.discount <= 0) return false;
+    if (search && !product.name.toLowerCase().includes(search.toLowerCase())) return false;
     if (selectedCategories.length > 0 && !selectedCategories.includes(product.category)) return false;
     if (maxPrice < 20000 && product.price > maxPrice) return false;
     if (product.rating < rating) return false;
@@ -282,7 +293,7 @@ function Products() {
       <section className="products-banner">
         <div className="product-banner-content">
           <h1 className="product-banner-title">
-            All <span className="product-banner-highlight">Products</span>
+            {deals ? "Best" : "All"} <span className="product-banner-highlight">{deals ? "Deals" : "Products"}</span>
           </h1>
           <p className="product-banner-text">
             Explore our wide range of top quality products

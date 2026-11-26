@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Home.css";
+import About from "./About";
 
 function Home() {
   return (
@@ -15,7 +16,7 @@ function Home() {
 
           <div className="hero-buttons">
             <Link className="shop-btn" to="/products">Shop Now →</Link>
-                        <Link className="deal-btn" to="/products">Explore Deals</Link>
+                        <Link className="deal-btn" to="/deals">Explore Deals</Link>
           </div>
           {/* Hero Benefits */}
           <div className="hero-benefits">
@@ -39,42 +40,44 @@ function Home() {
 
 
   <div className="category-list">
-    <div className="category-card electronics">
+    <Link className="category-card electronics" to="/products?category=Electronics">
       <img src="/images/category-electronics.png" alt="Electronics" />
       <h3>Electronics</h3>
       <p>1200+ Products</p>
-    </div>
+    </Link>
 
 
-    <div className="category-card fashion">
+    <Link className="category-card fashion" to="/products?category=Fashion">
       <img src="/images/category-fashion.png" alt="Fashion" />
       <h3>Fashion</h3>
       <p>1800+ Products</p>
-    </div>
-    <div className="category-card home-kitchen">
+    </Link>
+    <Link className="category-card home-kitchen" to="/products?category=Home%20%26%20Kitchen">
       <img src="/images/category-home.png" alt="Home & Kitchen" />
       <h3>Home & Kitchen</h3>
       <p>950+ Products</p>
-    </div>
+    </Link>
 
-    <div className="category-card beauty">
+    <Link className="category-card beauty" to="/products?category=Beauty">
       <img src="/images/category-beauty.png" alt="Beauty & Personal Care" />
       <h3>Beauty & Personal Care</h3>
       <p>750+ Products</p>
-    </div>
+    </Link>
 
-    <div className="category-card sports">
+    <Link className="category-card sports" to="/products?category=Sports">
       <img src="/images/category-fitness.png" alt="Sports & Fitness" />
       <h3>Sports & Fitness</h3>
       <p>600+ Products</p>
-    </div>
-    <div className="category-card books">
+    </Link>
+    <Link className="category-card books" to="/products?category=Books">
       <img src="/images/category-books.png" alt="Books & Stationery" />
       <h3>Books & Stationery</h3>
       <p>500+ Products</p>
-    </div>
+    </Link>
   </div>
 </section>
+
+      <About />
     </>
   );
 }

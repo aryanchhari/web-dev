@@ -1,0 +1,196 @@
+/* About Us */
+.about-section {
+  min-height: 570px;
+  padding: 65px 10%;
+  display: flex;
+  align-items: center;
+  background-color: #f5f9f9;
+  background-image: url("/images/about-bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.about-content {
+  width: 48%;
+  max-width: 580px;
+}
+
+.about-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #123044;
+  margin-bottom: 18px;
+}
+
+.about-line {
+  width: 30px;
+  height: 2px;
+  background-color: #009e98;
+}
+
+.about-title {
+  font-size: 64px;
+  font-weight: 800;
+  color: #082638;
+  margin-bottom: 8px;
+}
+
+.about-highlight {
+  color: #009e98;
+}
+
+.about-subtitle {
+  font-size: 25px;
+  font-weight: 600;
+  color: #496573;
+  line-height: 1.4;
+  margin-bottom: 22px;
+}
+
+.about-text {
+  color: #4e6570;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+.about-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0 35px;
+}
+
+.about-shop-btn, .about-learn-btn {
+  display: inline-block;
+  padding: 13px 26px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid #bdcdd0;
+}
+
+.about-shop-btn {
+  background-color: #052837;
+  color: white;
+  border-color: #052837;
+}
+
+.about-shop-btn:hover {
+  background-color: #009e98;
+  color: white;
+}
+
+.about-learn-btn {
+  color: #193849;
+  background-color: transparent;
+}
+
+.about-learn-btn:hover {
+  background-color: #e0eeee;
+  color: #193849;
+}
+
+.about-tagline {
+  font-size: 17px;
+  font-weight: 600;
+  font-style: italic;
+  color: #53717d;
+  margin-bottom: 8px;
+}
+
+.about-tagline-line {
+  width: 42px;
+  height: 2px;
+  background-color: #009e98;
+  margin-left: 20px;
+}
+
+/* Trusted Brands */
+.brands-section {
+  padding: 50px 4% 60px;
+  text-align: center;
+  background-color: white;
+}
+
+.brands-title {
+  color: #082638;
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.brands-text {
+  color: #607580;
+  font-size: 14px;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.brands-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.brand-item {
+  width: 10%;
+  padding: 14px 10px;
+}
+
+.brand-logo {
+  width: 100%;
+  max-width: 110px;
+  height: 55px;
+  object-fit: contain;
+}
+
+@media (max-width: 992px) {
+  .about-section {
+    padding: 45px 5%;
+    background-position: center;
+  }
+
+  .about-title {
+    font-size: 48px;
+  }
+
+  .about-subtitle {
+    font-size: 21px;
+  }
+
+  .brand-item {
+    width: 20%;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-section {
+    padding: 40px 6% 220px;
+    background-size: auto 220px;
+    background-position: right bottom;
+  }
+
+  .about-content {
+    width: 100%;
+  }
+
+  .about-title {
+    font-size: 42px;
+  }
+
+  .brand-item {
+    width: 25%;
+    padding: 10px;
+  }
+
+  .brand-logo {
+    height: 42px;
+  }
+}
